@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Usluge — Cool Taxi Kragujevac</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="services">
+
+<div id="site-nav"></div>
+
+<!-- USLUGE HERO — service routes sa transparentnim autom -->
+<section class="services-hero" data-screen-label="Usluge hero">
+  <div class="sh-bg-grid"></div>
+  <div class="sh-bg-glow"></div>
+
+  <div class="sh-inner">
+
+    <!-- LEVO: editorial -->
+    <div class="sh-text">
+      <span class="kicker">
+        <span class="dot"></span>
+        02 — Usluge · Cool Taxi Kragujevac
+      </span>
+      <h1 class="sh-head">
+        Šta god, gde god, kad god —<br>
+        <em>tu smo.</em>
+      </h1>
+      <p class="sh-sub">
+        Od jutarnje vožnje do posla, preko aerodroma Nikola Tesla, do Banja Luke i Soluna. Gradske vožnje po taksimetru — sve ostalo po dogovoru.
+      </p>
+
+      <div class="sh-chips">
+        <a href="#gradske" class="sh-chip"><span class="sh-chip-dot"></span>Gradske</a>
+        <a href="#medjugradske" class="sh-chip"><span class="sh-chip-dot"></span>Međugradske</a>
+        <a href="#inostrane" class="sh-chip"><span class="sh-chip-dot"></span>Inostrane</a>
+        <a href="#firme" class="sh-chip"><span class="sh-chip-dot"></span>Firme</a>
+        <a href="#reklame" class="sh-chip"><span class="sh-chip-dot"></span>Reklame</a>
+      </div>
+
+      <div class="sh-ctas">
+        <a href="tel:034200555" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Pozovi 034 200 555
+        </a>
+        <a href="#zahtev" class="btn btn-ghost">Pošalji upit</a>
+      </div>
+    </div>
+
+    <!-- DESNO: services map sa autom -->
+    <div class="sh-visual">
+
+      <!-- Compass behind -->
+      <div class="sh-compass">
+        <div class="sh-compass-ring sh-compass-ring-1"></div>
+        <div class="sh-compass-ring sh-compass-ring-2"></div>
+        <div class="sh-compass-ring sh-compass-ring-3"></div>
+        <!-- compass ticks N E S W -->
+        <span class="sh-compass-tick sh-tick-n">N</span>
+        <span class="sh-compass-tick sh-tick-e">E</span>
+        <span class="sh-compass-tick sh-tick-s">S</span>
+        <span class="sh-compass-tick sh-tick-w">W</span>
+      </div>
+
+      <!-- Route lines (SVG) -->
+      <svg class="sh-routes" viewBox="0 0 600 600" preserveAspectRatio="none" aria-hidden="true">
+        <!-- to Beograd (top, slight left) -->
+        <path d="M 300 320 Q 270 200 170 60" stroke="#5fa029" stroke-width="1.6" fill="none" stroke-dasharray="4 6" opacity=".55" stroke-linecap="round"/>
+        <!-- to Aerodrom (top right) -->
+        <path d="M 300 320 Q 410 230 560 80" stroke="#5fa029" stroke-width="1.6" fill="none" stroke-dasharray="4 6" opacity=".55" stroke-linecap="round"/>
+        <!-- to Niš (right) -->
+        <path d="M 300 320 Q 450 340 580 295" stroke="#5fa029" stroke-width="1.6" fill="none" stroke-dasharray="4 6" opacity=".55" stroke-linecap="round"/>
+        <!-- to Banja Luka (left) -->
+        <path d="M 300 320 Q 160 230 30 180" stroke="#5fa029" stroke-width="1.6" fill="none" stroke-dasharray="4 6" opacity=".55" stroke-linecap="round"/>
+        <!-- to Solun (bottom right) -->
+        <path d="M 300 320 Q 430 460 555 520" stroke="#5fa029" stroke-width="1.6" fill="none" stroke-dasharray="4 6" opacity=".55" stroke-linecap="round"/>
+      </svg>
+
+      <!-- Auto + stage -->
+      <div class="sh-stage">
+        <div class="sh-stage-glow"></div>
+        <img src="uploads/uslugetransparent.png" alt="Cool Taxi vozilo" class="sh-car">
+        <div class="sh-stage-shadow"></div>
+      </div>
+
+      <!-- Destination chips -->
+      <div class="sh-dest sh-dest-bg">
+        <span class="sh-dest-label">Beograd</span>
+        <span class="sh-dest-km">~140 km</span>
+      </div>
+      <div class="sh-dest sh-dest-ap">
+        <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor" class="sh-dest-icon"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+        <span class="sh-dest-label">Aerodrom NT</span>
+        <span class="sh-dest-km">~165 km</span>
+      </div>
+      <div class="sh-dest sh-dest-ni">
+        <span class="sh-dest-label">Niš</span>
+        <span class="sh-dest-km">~150 km</span>
+      </div>
+      <div class="sh-dest sh-dest-bec">
+        <span class="sh-dest-icon">★</span>
+        <span class="sh-dest-label">Banja Luka</span>
+        <span class="sh-dest-km">~470 km</span>
+      </div>
+      <div class="sh-dest sh-dest-sol">
+        <span class="sh-dest-label">Solun</span>
+        <span class="sh-dest-km">~400 km</span>
+      </div>
+
+      <!-- Origin pin pod autom -->
+      <div class="sh-origin">
+        <span class="sh-origin-dot"></span>
+        <span>KRAGUJEVAC · POLAZIŠTE</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DETAILED SERVICES -->
+<section class="services" id="usluge">
+  <div class="service-grid service-grid-detail">
+    <article class="srv srv-lg" id="gradske">
+      <div class="srv-num">01</div>
+      <div class="srv-icon">
+        <svg viewBox="0 0 80 60" width="100%" height="100%">
+          <!-- pickup pin koji lebdi gore desno -->
+          <g transform="translate(64, 9)">
+            <path d="M0 -6 C-3.5 -6 -6 -3.5 -6 0 C-6 3 -2 7 0 10 C2 7 6 3 6 0 C6 -3.5 3.5 -6 0 -6 Z" fill="#7DC242" stroke="#1a1a1a" stroke-width="1.2"/>
+            <circle r="2" fill="#1a1a1a"/>
+          </g>
+          <!-- ulica/cesta -->
+          <line x1="2" y1="52" x2="78" y2="52" stroke="#1a1a1a" stroke-width="1" opacity=".18"/>
+          <path d="M6 52 H14 M22 52 H30 M38 52 H46 M54 52 H62 M70 52 H78" stroke="#7DC242" stroke-width="1.4" opacity=".55"/>
+
+          <!-- taksi (side view) -->
+          <g transform="translate(8, 24)">
+            <!-- donja školjka -->
+            <rect x="0" y="6" width="44" height="16" rx="4" fill="#1a1a1a"/>
+            <!-- krov / kabina -->
+            <path d="M6 6 L12 -6 H32 L38 6 Z" fill="#fff" stroke="#1a1a1a" stroke-width="1.5" stroke-linejoin="round"/>
+            <!-- prozori -->
+            <path d="M9 4 L14 -4 H21 L21 4 Z" fill="#7DC242" opacity=".5"/>
+            <path d="M23 -4 H30 L35 4 H23 Z" fill="#7DC242" opacity=".5"/>
+            <!-- taxi roof light -->
+            <rect x="17" y="-10" width="10" height="4" rx="1.2" fill="#7DC242" stroke="#1a1a1a" stroke-width="1"/>
+            <!-- vrata linija -->
+            <line x1="22" y1="6" x2="22" y2="22" stroke="#7DC242" stroke-width="0.8" opacity=".55"/>
+            <!-- ručica vrata -->
+            <rect x="16" y="11" width="4" height="1.4" rx="0.5" fill="#7DC242"/>
+            <!-- točkovi -->
+            <circle cx="10" cy="24" r="5" fill="#1a1a1a" stroke="#fff" stroke-width="1.8"/>
+            <circle cx="34" cy="24" r="5" fill="#1a1a1a" stroke="#fff" stroke-width="1.8"/>
+            <circle cx="10" cy="24" r="1.6" fill="#7DC242"/>
+            <circle cx="34" cy="24" r="1.6" fill="#7DC242"/>
+          </g>
+
+        </svg>
+      </div>
+      <h3>Gradske vožnje</h3>
+      <p>Standardni taksimetar po važećoj tarifi grada. Brz odgovor, čista vozila, vozač koji zna grad u prste.</p>
+      <ul>
+        <li>Dolazak prosečno za 4 minuta</li>
+        <li>Najpovoljnija start tarifa</li>
+        <li>Plaćanje karticom u svakom autu</li>
+      </ul>
+    </article>
+
+    <article class="srv srv-dark" id="medjugradske">
+      <div class="srv-num">02</div>
+      <div class="srv-icon">
+        <svg viewBox="0 0 80 60" width="100%" height="100%">
+          <!-- highway perspektivni trapez -->
+          <path d="M16 52 L64 52 L48 14 L32 14 Z" fill="#0a0a0a" stroke="rgba(125,194,66,.35)" stroke-width="1"/>
+          <!-- horizont -->
+          <line x1="2" y1="14" x2="78" y2="14" stroke="#fff" stroke-width="0.5" opacity=".08"/>
+          <!-- središnja isprekidana linija -->
+          <line x1="40" y1="50" x2="40" y2="16" stroke="#7DC242" stroke-width="1.6" stroke-dasharray="3 4" stroke-linecap="round"/>
+
+          <!-- bliska taksi (veći, dno) -->
+          <g transform="translate(30, 44)">
+            <rect x="-9" y="-4" width="18" height="8" rx="1.5" fill="#fff"/>
+            <rect x="-6" y="-7" width="12" height="3.5" rx="0.5" fill="#7DC242"/>
+            <!-- roof light -->
+            <rect x="-2" y="-9" width="4" height="2" rx="0.4" fill="#7DC242" stroke="#1a1a1a" stroke-width="0.3"/>
+            <circle cx="-5" cy="4" r="2" fill="#1a1a1a" stroke="#fff" stroke-width="1"/>
+            <circle cx="5" cy="4" r="2" fill="#1a1a1a" stroke="#fff" stroke-width="1"/>
+          </g>
+
+          <!-- daleki taksi (mali, gore) -->
+          <g transform="translate(40, 24)">
+            <rect x="-4" y="-2" width="8" height="5" rx="1" fill="#fff"/>
+            <rect x="-2.5" y="-4" width="5" height="2.5" rx="0.3" fill="#7DC242"/>
+          </g>
+
+          <!-- destinacija sign (desno) -->
+          <g transform="translate(58, 16)">
+            <rect x="-12" y="0" width="14" height="10" rx="0.5" fill="#7DC242" stroke="#1a1a1a" stroke-width="0.5"/>
+            <text x="-5" y="7.2" text-anchor="middle" font-family="Geist Mono" font-weight="800" font-size="5" fill="#1a1a1a">BG ↗</text>
+            <rect x="0.6" y="10" width="1" height="8" fill="#fff" opacity=".4"/>
+          </g>
+
+          <!-- km mark -->
+          <text x="6" y="11" font-family="Geist Mono" font-size="5.5" font-weight="700" fill="#7DC242" letter-spacing=".5">~140km</text>
+        </svg>
+      </div>
+      <h3>Međugradske vožnje</h3>
+      <p>Beograd, Niš, Novi Sad, Aerodrom Nikola Tesla — bilo gde u Srbiji. Cena se dogovara unapred.</p>
+      <span class="srv-pill">Cena po dogovoru</span>
+      <div class="route-list">
+        <div><span>Kragujevac → Beograd</span><strong>~140 km</strong></div>
+        <div><span>Kragujevac → Aerodrom Nikola Tesla</span><strong>~165 km</strong></div>
+        <div><span>Kragujevac → Niš</span><strong>~150 km</strong></div>
+        <div><span>Kragujevac → Novi Sad</span><strong>~225 km</strong></div>
+      </div>
+    </article>
+
+    <article class="srv" id="inostrane">
+      <div class="srv-num">03</div>
+      <div class="srv-icon">
+        <svg viewBox="0 0 80 60" width="100%" height="100%">
+          <!-- globe outline -->
+          <circle cx="52" cy="30" r="20" fill="none" stroke="#1a1a1a" stroke-width="1" opacity=".18"/>
+          <ellipse cx="52" cy="30" rx="20" ry="7" fill="none" stroke="#1a1a1a" stroke-width="0.6" opacity=".18"/>
+          <ellipse cx="52" cy="30" rx="20" ry="14" fill="none" stroke="#1a1a1a" stroke-width="0.6" opacity=".18"/>
+          <line x1="52" y1="10" x2="52" y2="50" stroke="#1a1a1a" stroke-width="0.6" opacity=".18"/>
+          <ellipse cx="52" cy="30" rx="10" ry="20" fill="none" stroke="#1a1a1a" stroke-width="0.6" opacity=".18"/>
+
+          <!-- flight path arc -->
+          <path d="M16 46 Q 46 8 70 26" stroke="#7DC242" stroke-width="1.5" fill="none" stroke-dasharray="3 3" stroke-linecap="round"/>
+
+          <!-- avion u sredini arc-a -->
+          <g transform="translate(40, 20) rotate(35)">
+            <path d="M-5 0 L 6 -1.5 L 4 0 L 6 1.5 L -1 .5 L -3 3 L -2 .5 L -5 0 Z" fill="#1a1a1a"/>
+          </g>
+
+          <!-- start pin (KG) -->
+          <g transform="translate(16, 46)">
+            <circle r="3.5" fill="#1a1a1a"/>
+            <circle r="1.5" fill="#7DC242"/>
+          </g>
+
+          <!-- end pin (destination) -->
+          <g transform="translate(70, 26)">
+            <path d="M0 -8 C-3.5 -8 -6 -5.5 -6 -2 C-6 1 0 6 0 6 C0 6 6 1 6 -2 C6 -5.5 3.5 -8 0 -8 Z" fill="#7DC242" stroke="#1a1a1a" stroke-width="1"/>
+            <circle r="1.8" cy="-3" fill="#fff"/>
+          </g>
+
+          <!-- pasoš (front, nakrivljen) -->
+          <g transform="translate(6, 24) rotate(-10)">
+            <rect x="0" y="0" width="22" height="28" rx="2" fill="#1a1a1a"/>
+            <!-- emblem -->
+            <circle cx="11" cy="10" r="4" fill="none" stroke="#7DC242" stroke-width="1"/>
+            <path d="M11 7.5 L11 12.5 M8.5 10 L13.5 10" stroke="#7DC242" stroke-width="1.2" stroke-linecap="round"/>
+            <!-- title linije -->
+            <rect x="4" y="17" width="14" height="1.2" rx="0.6" fill="#7DC242"/>
+            <rect x="4" y="20" width="10" height="1" rx="0.5" fill="#fff" opacity=".5"/>
+            <rect x="4" y="22.5" width="12" height="1" rx="0.5" fill="#fff" opacity=".5"/>
+          </g>
+        </svg>
+      </div>
+      <h3>Inostrane destinacije</h3>
+      <p>Vozimo i preko granice — Sarajevo, Skoplje, Solun, Beč, Budimpešta.</p>
+      <span class="srv-pill">Cena po dogovoru</span>
+      <ul>
+        <li>Validan pasoš + zdravstveno osiguranje</li>
+        <li>Polazak iz Kragujevca u dogovoreno vreme</li>
+        <li>Sve po dogovoru</li>
+      </ul>
+    </article>
+
+    <article class="srv srv-accent" id="firme">
+      <div class="srv-num">04</div>
+      <div class="srv-icon">
+        <svg viewBox="0 0 80 60" width="100%" height="100%">
+          <!-- pozadinski dokument (offset, nakrivljen) -->
+          <g transform="rotate(-5 30 30)">
+            <rect x="12" y="5" width="34" height="44" rx="2.5" fill="#fff" stroke="#1a1a1a" stroke-width="1" opacity=".55"/>
+          </g>
+
+          <!-- glavna faktura -->
+          <rect x="16" y="7" width="38" height="46" rx="2.5" fill="#fff" stroke="#1a1a1a" stroke-width="1.5"/>
+
+          <!-- header sa logom -->
+          <rect x="16" y="7" width="38" height="11" rx="2.5 2.5 0 0" fill="#1a1a1a"/>
+          <rect x="16" y="11" width="38" height="7" fill="#1a1a1a"/>
+          <!-- logo dot -->
+          <circle cx="22" cy="12.5" r="2.5" fill="#7DC242"/>
+          <path d="M21 12.5 L21.6 13.5 L23 12" stroke="#1a1a1a" stroke-width=".7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- COOL TAXI label -->
+          <rect x="28" y="10.5" width="14" height="2" rx="0.6" fill="#fff"/>
+          <rect x="28" y="14" width="9" height="1.4" rx="0.5" fill="#7DC242"/>
+
+          <!-- doc linije -->
+          <rect x="20" y="23" width="20" height="1.6" rx="0.5" fill="#1a1a1a"/>
+          <rect x="20" y="28" width="30" height="1.4" rx="0.5" fill="#1a1a1a" opacity=".25"/>
+          <rect x="20" y="32" width="26" height="1.4" rx="0.5" fill="#1a1a1a" opacity=".25"/>
+          <rect x="20" y="36" width="22" height="1.4" rx="0.5" fill="#1a1a1a" opacity=".25"/>
+
+          <!-- total badge -->
+          <rect x="20" y="42" width="30" height="7" rx="1.2" fill="#7DC242"/>
+          <path d="M23 45.7 L25 47.5 L28.5 44" stroke="#1a1a1a" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="32" y="44.4" width="14" height="1.4" rx="0.4" fill="#1a1a1a"/>
+          <rect x="32" y="46.6" width="10" height="1.1" rx="0.4" fill="#1a1a1a" opacity=".55"/>
+
+          <!-- briefcase u uglu -->
+          <g transform="translate(64, 18)">
+            <rect x="-7" y="-1" width="14" height="11" rx="1.5" fill="#1a1a1a"/>
+            <rect x="-4" y="-4" width="8" height="3" rx="0.7" fill="none" stroke="#1a1a1a" stroke-width="1.4"/>
+            <line x1="-7" y1="3.5" x2="7" y2="3.5" stroke="#7DC242" stroke-width="1.4"/>
+            <rect x="-1" y="2" width="2" height="3" fill="#7DC242"/>
+          </g>
+        </svg>
+      </div>
+      <h3>Ugovori sa firmama</h3>
+      <p>Plaćanje preko računa na kraju meseca. Jedan kontakt, jedna faktura, izveštaji po vozaču i odeljenju. Fiksna cena za poslovne rute.</p>
+      <ul>
+        <li>Mesečno fakturisanje</li>
+        <li>Prioritetni dispečer za firme</li>
+        <li>Detaljan izveštaj svake vožnje</li>
+        <li>Fiksne tarife za redovne rute</li>
+      </ul>
+    </article>
+
+    <article class="srv" id="reklame">
+      <div class="srv-num">05</div>
+      <div class="srv-icon">
+        <svg viewBox="0 0 80 60" width="100%" height="100%">
+          <!-- spotlight cone -->
+          <path d="M40 2 L14 30 L66 30 Z" fill="#7DC242" opacity=".12"/>
+
+          <!-- support poles -->
+          <rect x="22" y="42" width="2.2" height="14" fill="#1a1a1a"/>
+          <rect x="56" y="42" width="2.2" height="14" fill="#1a1a1a"/>
+          <!-- ground base -->
+          <rect x="18" y="55" width="10" height="2" rx="0.4" fill="#1a1a1a"/>
+          <rect x="52" y="55" width="10" height="2" rx="0.4" fill="#1a1a1a"/>
+          <line x1="2" y1="57.5" x2="78" y2="57.5" stroke="#1a1a1a" stroke-width="0.5" opacity=".18"/>
+
+          <!-- billboard outer frame -->
+          <rect x="8" y="6" width="64" height="38" rx="2" fill="#1a1a1a"/>
+          <!-- inner ad canvas -->
+          <rect x="11" y="9" width="58" height="32" rx="1" fill="#fff"/>
+
+          <!-- LEFT: ad image (green panel sa "scene") -->
+          <rect x="14" y="12" width="24" height="20" rx="0.6" fill="#7DC242"/>
+          <!-- sun -->
+          <circle cx="20" cy="17" r="2.6" fill="#fff" opacity=".85"/>
+          <!-- mountains/horizon -->
+          <path d="M14 32 L20 24 L26 28 L32 21 L38 26 L38 32 Z" fill="#1a1a1a" opacity=".3"/>
+
+          <!-- RIGHT: headline lines -->
+          <rect x="42" y="13" width="22" height="2.8" rx="0.6" fill="#1a1a1a"/>
+          <rect x="42" y="17.4" width="18" height="1.8" rx="0.5" fill="#1a1a1a" opacity=".4"/>
+          <rect x="42" y="20.5" width="21" height="1.8" rx="0.5" fill="#1a1a1a" opacity=".4"/>
+          <rect x="42" y="23.6" width="15" height="1.8" rx="0.5" fill="#1a1a1a" opacity=".4"/>
+
+          <!-- CTA button -->
+          <rect x="42" y="28" width="22" height="6" rx="3" fill="#7DC242"/>
+          <text x="53" y="32" text-anchor="middle" font-family="Geist Mono" font-weight="800" font-size="3.4" fill="#1a1a1a" letter-spacing=".5">SAZNAJ VIŠE →</text>
+
+          <!-- bottom brand strip pod image-om -->
+          <rect x="14" y="35" width="24" height="4" rx="0.5" fill="#1a1a1a"/>
+          <text x="26" y="37.9" text-anchor="middle" font-family="Bricolage Grotesque" font-weight="800" font-size="3.2" fill="#7DC242" letter-spacing=".8">VAŠ BRAND</text>
+
+          <!-- AD badge corner -->
+          <g transform="translate(64, 8)">
+            <rect x="-4.5" y="-2.5" width="9" height="6" rx="1.2" fill="#7DC242" stroke="#1a1a1a" stroke-width="0.7"/>
+            <text x="0" y="1.6" text-anchor="middle" font-family="Geist Mono" font-weight="800" font-size="4.2" fill="#1a1a1a">AD</text>
+          </g>
+
+          <!-- sparkles -->
+          <g fill="#7DC242">
+            <path d="M4 16 L5.4 17.6 L7 16 L5.4 14.4 Z" opacity=".65"/>
+            <path d="M74 36 L75 37.2 L76 36 L75 34.8 Z" opacity=".55"/>
+            <circle cx="4" cy="40" r=".9" opacity=".55"/>
+            <circle cx="76" cy="22" r=".7" opacity=".5"/>
+          </g>
+        </svg>
+      </div>
+      <h3>Krovne reklame</h3>
+      <p>140+ vozila po Kragujevcu nosi tvoju poruku 24/7. Pokretna reklama gradom.</p>
+      <span class="srv-pill srv-pill-dark">Marketing paket</span>
+    </article>
+
+    <article class="srv">
+      <div class="srv-num">06</div>
+      <div class="srv-icon">
+        <svg viewBox="0 0 80 60" width="100%" height="100%">
+          <!-- dashboard hint donji deo -->
+          <path d="M0 52 Q 40 42 80 52 L80 60 L0 60 Z" fill="#1a1a1a" opacity=".08"/>
+          <!-- volan u uglu -->
+          <circle cx="12" cy="50" r="6" fill="none" stroke="#1a1a1a" stroke-width="1" opacity=".3"/>
+          <circle cx="12" cy="50" r="1.8" fill="#1a1a1a" opacity=".3"/>
+          <line x1="12" y1="44" x2="12" y2="56" stroke="#1a1a1a" stroke-width=".7" opacity=".2"/>
+
+          <!-- tablet -->
+          <g transform="translate(44, 26)">
+            <!-- okvir/držač -->
+            <rect x="-23" y="-19" width="46" height="34" rx="3" fill="#1a1a1a"/>
+            <!-- ekran -->
+            <rect x="-20" y="-16" width="40" height="28" rx="1.5" fill="#7DC242"/>
+            <!-- video frame elementi -->
+            <rect x="-17" y="-13" width="34" height="2" rx="0.5" fill="#1a1a1a" opacity=".15"/>
+            <!-- play button -->
+            <circle cx="0" cy="-2" r="6.5" fill="#1a1a1a"/>
+            <path d="M-2 -5 L 4.5 -2 L -2 1 Z" fill="#7DC242"/>
+            <!-- progress bar -->
+            <rect x="-17" y="8" width="34" height="1.5" rx="0.7" fill="#1a1a1a" opacity=".2"/>
+            <rect x="-17" y="8" width="22" height="1.5" rx="0.7" fill="#1a1a1a"/>
+            <circle cx="5" cy="8.75" r="1.4" fill="#1a1a1a"/>
+            <!-- speaker dot -->
+            <circle cx="0" cy="-17" r=".7" fill="#7DC242"/>
+            <!-- držač / mount -->
+            <rect x="-2.5" y="15" width="5" height="3" fill="#1a1a1a"/>
+            <rect x="-7" y="18" width="14" height="2.4" rx="1.2" fill="#1a1a1a"/>
+          </g>
+
+          <!-- VIDEO AD badge -->
+          <g transform="translate(70, 8)">
+            <rect x="-10" y="-4.5" width="20" height="9" rx="2" fill="#7DC242" stroke="#1a1a1a" stroke-width="1"/>
+            <circle cx="-5.5" cy="0" r="1.4" fill="#1a1a1a"/>
+            <text x="2" y="2" text-anchor="middle" font-family="Geist Mono" font-weight="800" font-size="4.5" fill="#1a1a1a">VIDEO</text>
+          </g>
+        </svg>
+      </div>
+      <h3>Tablet u vozilu</h3>
+      <p>Video reklama na tabletu ispred putnika.</p>
+      <span class="srv-pill srv-pill-dark">Marketing paket</span>
+    </article>
+  </div>
+
+  <!-- REQUEST FORM -->
+  <div class="request" id="zahtev">
+    <div class="request-side">
+      <span class="kicker light">Posebne potrebe?</span>
+      <h3>Pošalji upit.<br>Za bilo šta, <em> što te zanima</em>.</h3>
+      <p>Imate korporativnu potrebu za prevozom u određeno vreme, redovne ture, posebne predmete ili međugradsku vožnju? Popunite formu — javljamo se sa konkretnom ponudom.</p>
+      <div class="request-quick">
+        <a href="tel:034200555">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          034 200 555
+        </a>
+        <a href="mailto:taxicool034@gmail.com">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          taxicool034@gmail.com
+        </a>
+      </div>
+    </div>
+
+    <form class="request-form" onsubmit="return submitForm(event)">
+      <div class="row">
+        <label>
+          <span>Tip vožnje</span>
+          <select name="type" required>
+            <option value="">Izaberi…</option>
+            <option>Gradska — redovna ruta</option>
+            <option>Međugradska — Srbija</option>
+            <option>Inostrana destinacija</option>
+            <option>Korporativni ugovor</option>
+            <option>Specijalan teret / dostava</option>
+            <option>Krovna reklama / tablet</option>
+          </select>
+        </label>
+        
+      </div>
+      <div class="row">
+        <label><span>Polazak</span><input type="text" name="from" placeholder="npr. Stanica, Kragujevac" required></label>
+        <label><span>Odredište</span><input type="text" name="to" placeholder="npr. Aerodrom Nikola Tesla" required></label>
+      </div>
+      <div class="row">
+        <label><span>Datum i vreme</span><input type="datetime-local" name="when" required></label>
+        <label><span>Telefon</span><input type="tel" name="phone" placeholder="+381 …" required></label>
+      </div>
+      <label class="full">
+        <span>Napomena</span>
+        <textarea name="note" rows="3" placeholder="Dečje sedište, prtljag, redovne ture, fakturisanje firme…"></textarea>
+      </label>
+      <div class="row form-foot">
+        <label class="check"><input type="checkbox" required> Slažem se sa obradom podataka u svrhu rezervacije.</label>
+        <button type="submit" class="btn btn-primary">
+          Pošalji upit
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+      <div class="form-thanks">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        Hvala — primili smo upit. Dispečer će se javiti u roku od sata.
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ZAPOSLENJE — regrutacija novih vozača -->
+<section class="hire" id="zaposlenje" data-screen-label="Karijera">
+  <div class="hire-bg-grid"></div>
+  <div class="hire-bg-glow"></div>
+
+  <div class="hire-inner">
+
+    <!-- LEVO: motivacioni tekst -->
+    <div class="hire-text">
+      <span class="kicker">
+        <span class="dot"></span>
+        Karijera · Postani Cool Taxi vozač
+      </span>
+      <h2 class="big-head">
+        Voziš?<br>
+        <em>Pridruži se</em><br>
+        ekipi.
+      </h2>
+      <p class="hire-lede">
+        Tražimo nove vozače sa B kategorijom, čistom evidencijom i ljubaznim odnosom prema putnicima. Fer zarada, redovne smene, klimatizovano vozilo iz naše flote — ili tvoje.
+      </p>
+
+      <div class="hire-perks">
+        
+       
+        <div class="hire-perk">
+          <div class="hire-perk-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+          </div>
+          <div>
+            <strong>Auto iz flote</strong>
+            <span>Nemaš svoje vozilo? Daćemo ti naše — hibrid ili električno.</span>
+          </div>
+        </div>
+        <div class="hire-perk">
+          <div class="hire-perk-icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 4 9 8 10 4-1 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div>
+            <strong>Sva papirologija pokrivena</strong>
+            <span>Osiguranje, dozvole, prijava — naš tim sređuje za tebe.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hire-stats">
+        <div><b>200+</b><span>aktivnih vozača</span></div>
+        <div><b>10</b><span>godina iskustva</span></div>
+        <div><b>24/7</b><span>dispečer podrška</span></div>
+      </div>
+    </div>
+
+    <!-- DESNO: formular -->
+    <div class="hire-form-wrap">
+      <div class="hire-form-tag">
+        <span class="hire-form-tag-dot"></span>
+        ZAPOSLENJE · APLIKACIJA
+      </div>
+      <h3 class="hire-form-title">Aplikacija za posao vozača</h3>
+      <p class="hire-form-sub">Popuni formu — javljamo se u roku od 48h. Razgovor po dogovoru, u Kragujevcu ili online.</p>
+
+      <form class="request-form hire-form" onsubmit="return submitForm(event)">
+        <label class="full">
+          <span>Ime i prezime</span>
+          <input type="text" name="hname" placeholder="npr. Marko Marković" required>
+        </label>
+        <div class="row">
+          <label><span>Telefon</span><input type="tel" name="hphone" placeholder="+381 …" required></label>
+          <label><span>Email</span><input type="email" name="hemail" placeholder="ime@email.com" required></label>
+        </div>
+        <div class="row">
+          <label>
+            <span>Vozačka kategorija</span>
+            <select name="hcat" required>
+              <option value="">Izaberi…</option>
+              <option>B kategorija</option>
+              <option>B + Profesionalna (taxi)</option>
+              <option>B + C / kombi</option>
+              <option>D — Autobus</option>
+            </select>
+          </label>
+          <label>
+            <span>Godine iskustva</span>
+            <select name="hexp" required>
+              <option value="">Izaberi…</option>
+              <option>Manje od 1 godine</option>
+              <option>1–3 godine</option>
+              <option>3–5 godina</option>
+              <option>5–10 godina</option>
+              <option>10+ godina</option>
+            </select>
+          </label>
+        </div>
+        <div class="row">
+          <label>
+            <span>Vozilo</span>
+            <select name="hvehicle" required>
+              <option value="">Izaberi…</option>
+              <option>Imam svoje vozilo</option>
+              <option>Tražim vozilo iz flote</option>
+              <option>Otvoren za obe opcije</option>
+            </select>
+          </label>
+   
+        </div>
+        <label class="full">
+          <span>O tebi (par reči)</span>
+          <textarea name="habout" rows="3" placeholder="Reci nam o sebi — godine, dosadašnji posao, zašto Cool Taxi…"></textarea>
+        </label>
+        <div class="row form-foot">
+          <label class="check"><input type="checkbox" required> Slažem se sa obradom podataka u svrhu zapošljavanja.</label>
+          <button type="submit" class="btn btn-primary">
+            Pošalji aplikaciju
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+        <div class="form-thanks">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          Hvala — primili smo tvoju aplikaciju. Javljamo se u roku od 48h.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-head">
+    <span class="kicker">Često pitana pitanja</span>
+    <h2 class="big-head">Najčešće <em>nedoumice</em>.</h2>
+  </div>
+  <div class="faq-list">
+    <details>
+      <summary><span>Mogu li da platim karticom u svakom vozilu?</span><i></i></summary>
+      <p>Da. Cool Taxi je prvi i jedini taksi u Kragujevcu sa POS terminalom u <strong>svakom</strong> vozilu.</p>
+    </details>
+    <details>
+      <summary><span>Kako se određuje cena za međugradske vožnje?</span><i></i></summary>
+      <p>Cena se dogovara unapred poruka/poziv na 034 200 555, Viberom 069 5200 555 ili Mailom taxicool034@gmail.com.</p>
+    </details>
+    <details>
+      <summary><span>Vozite li van granica Srbije?</span><i></i></summary>
+      <p>Vozimo, potreban je validan pasoš i sve po dogovoru.</p>
+    </details>
+    <details>
+      <summary><span>Kako moja firma može da otvori ugovor?</span><i></i></summary>
+      <p>Pošaljite upit preko forme iznad ili na taxicool034@gmail.com. Dispečer će se javiti istog dana sa nacrtom ugovora — fakturisanje se vrši na kraju meseca.</p>
+    </details>
+    <details>
+      <summary><span>Mogu li da naručim taksi preko Vibera ili WhatsApp-a?</span><i></i></summary>
+      <p>Da, na 069 5200 555.Vozilo stiže za par minuta.</p>
+    </details>
+   
+  </div>
+</section>
+
+<div id="site-foot"></div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cool Taxi · Preuzmi aplikaciju</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Geist:wght@400;500;600&family=Geist+Mono&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"Geist",system-ui,sans-serif;
+  background:#eef7e2;
+  color:#101510;
+  min-height:100vh;
+  display:flex;align-items:center;justify-content:center;
+  padding:32px;
+  position:relative;overflow:hidden;
+}
+body::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(125,194,66,.12) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(125,194,66,.12) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(ellipse at center,#000,transparent 70%);
+}
+.box{
+  position:relative;z-index:1;
+  max-width:480px;width:100%;
+  background:#fff;border-radius:28px;
+  padding:48px 36px;text-align:center;
+  border:1px solid rgba(26,26,26,.08);
+  box-shadow:0 40px 80px -40px rgba(0,0,0,.15);
+}
+.logo{
+  width:72px;height:72px;
+  background:#7DC242;border-radius:22px;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 24px;
+  font-family:"Bricolage Grotesque";font-weight:800;font-size:38px;color:#1a1a1a;
+}
+h1{
+  font-family:"Bricolage Grotesque";font-weight:800;
+  font-size:36px;line-height:1.05;letter-spacing:-.02em;
+  margin-bottom:14px;
+}
+h1 em{color:#5fa029;font-style:normal}
+p{color:#3a3a3a;margin-bottom:32px;font-size:15px}
+.spinner{
+  width:42px;height:42px;margin:0 auto 24px;
+  border:3px solid #eef7e2;border-top-color:#7DC242;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.choice{display:flex;gap:12px;margin-top:24px}
+.choice a{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px;border-radius:14px;
+  background:#1a1a1a;color:#fff;
+  font-size:14px;font-weight:600;
+  text-decoration:none;
+  transition:background .2s;
+}
+.choice a:hover{background:#5fa029}
+.choice a.android{background:#7DC242;color:#1a1a1a}
+.choice a.android:hover{background:#1a1a1a;color:#7DC242}
+.foot{
+  margin-top:24px;font-family:"Geist Mono",monospace;
+  font-size:11px;color:#7a7a7a;
+}
+.detected{
+  font-family:"Geist Mono",monospace;font-size:12px;
+  background:#f7fbf0;color:#5fa029;
+  display:inline-block;padding:6px 12px;border-radius:999px;
+  margin-bottom:20px;
+}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="logo">ct</div>
+  <div class="detected" id="detected">Detektujem uređaj…</div>
+  <h1>Preuzimanje <em>Cool Taxi</em> aplikacije</h1>
+  <p>Preusmeravamo te na pravu prodavnicu aplikacija za tvoj uređaj.</p>
+  <div class="spinner"></div>
+  <div class="choice">
+    <a href="https://apps.apple.com/" class="ios">App Store (iOS)</a>
+    <a href="https://play.google.com/" class="android">Google Play (Android)</a>
+  </div>
+  <div class="foot">Cool Taxi · Kragujevac · 034 200 555</div>
+</div>
+<script>
+(function(){
+  const ua = navigator.userAgent || navigator.vendor || window.opera || '';
+  const det = document.getElementById('detected');
+  const isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+  const isAndroid = /android/i.test(ua);
+  const iosUrl = 'https://apps.apple.com/';
+  const androidUrl = 'https://play.google.com/';
+  if (isIOS) {
+    det.textContent = '✓ iOS detektovan — App Store';
+    setTimeout(() => location.href = iosUrl, 1500);
+  } else if (isAndroid) {
+    det.textContent = '✓ Android detektovan — Google Play';
+    setTimeout(() => location.href = androidUrl, 1500);
+  } else {
+    det.textContent = '✓ Desktop — izaberi platformu';
+  }
+})();
+</script>
+</body>
+</html>
