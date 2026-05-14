@@ -1493,13 +1493,13 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
   .arate-num{font-size:22px;line-height:1;margin:2px 0}
   .arate-meta{font-size:8.5px;letter-spacing:.4px}
 
-  /* Notif — centriran na dnu, ispod telefona */
+  /* Notif — levo ispod telefona, ne preliva viewport */
   .app-float-notif{
-    width:auto;max-width:90%;
+    width:auto;max-width:94%;
     padding:11px 14px;
-    right:auto;left:50%;top:auto;
-    bottom:3%;transform:translateX(-50%);
-    white-space:nowrap;
+    right:auto;left:3%;top:auto;
+    bottom:3%;transform:none;
+    white-space:normal;
   }
   .app-float-notif .anotif-text strong{font-size:13px}
   .app-float-notif .anotif-text span{font-size:10.5px}
