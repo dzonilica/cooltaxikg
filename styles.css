@@ -1045,6 +1045,7 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
   outline:none;border-color:var(--green);background:rgba(255,255,255,.1);
 }
 .request-form select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='%237DC242' d='M6 8 0 0h12z'/></svg>");background-repeat:no-repeat;background-position:right 14px center;background-size:10px}
+.request-form option{background:#161616;color:#fff}
 .form-foot{align-items:center}
 .check{flex-direction:row !important;align-items:center;gap:8px !important;font-size:12.5px !important;color:rgba(255,255,255,.6) !important}
 .check input{width:auto;padding:0}
