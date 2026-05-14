@@ -1640,6 +1640,13 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
   flex-direction:column;background:#fff;padding:24px;
   border-bottom:1px solid var(--line);gap:14px;
 }
+/* mobilni dropdown ima belu pozadinu — forsiraj tamni tekst nezavisno od scroll/home stanja */
+.nav-links.open a,
+body[data-page="home"] .nav:not(.scrolled) .nav-links.open a{color:var(--ink-3)}
+.nav-links.open a:hover,
+body[data-page="home"] .nav:not(.scrolled) .nav-links.open a:hover{color:var(--ink)}
+.nav-links.open a.active,
+body[data-page="home"] .nav:not(.scrolled) .nav-links.open a.active{color:var(--green-deep)}
 
 /* Page hero (about/services/contact) */
 .page-hero{

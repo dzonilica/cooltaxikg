@@ -1,0 +1,65 @@
+# Cool Taxi Kragujevac — robots.txt
+# https://taxikragujevac.com
+
+User-agent: *
+Allow: /
+Disallow: /uploads/pasted-*
+
+# Glavni search engine boti — dozvola za sve
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# AI crawl-eri — eksplicitno dozvoljeni (AI search vidljivost)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Hostname
+Host: https://taxikragujevac.com
+
+# Sitemap
+Sitemap: https://taxikragujevac.com/sitemap.xml

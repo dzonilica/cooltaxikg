@@ -3,15 +3,15 @@
   const active = document.body.dataset.page || '';
   const navHTML = `
   <header class="nav" id="nav">
-    <a class="brand" href="index.html" aria-label="Cool Taxi">
+    <a class="brand" href="/" aria-label="Cool Taxi">
       <img src="assets/logo.png" alt="Cool Taxi" class="brand-logo">
     </a>
     <nav class="nav-links">
-      <a href="index.html" data-p="home">Početna</a>
-      <a href="o-nama.html" data-p="about">O nama</a>
-      <a href="usluge.html" data-p="services">Usluge</a>
-      <a href="aplikacija.html" data-p="app">Aplikacija</a>
-      <a href="kontakt.html" data-p="contact">Kontakt</a>
+      <a href="/" data-p="home">Početna</a>
+      <a href="/o-nama" data-p="about">O nama</a>
+      <a href="/usluge" data-p="services">Usluge</a>
+      <a href="/aplikacija" data-p="app">Aplikacija</a>
+      <a href="/kontakt" data-p="contact">Kontakt</a>
     </nav>
     <a href="tel:034200555" class="nav-cta">
       <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -32,18 +32,18 @@
       <div class="foot-cols">
         <div>
           <h6>Usluge</h6>
-          <a href="usluge.html">Gradske vožnje</a>
-          <a href="usluge.html">Međugradske</a>
-          <a href="usluge.html">Inostrane</a>
-          <a href="usluge.html">Ugovori sa firmama</a>
-          <a href="usluge.html">Reklamiranje</a>
+          <a href="/usluge">Gradske vožnje</a>
+          <a href="/usluge">Međugradske</a>
+          <a href="/usluge">Inostrane</a>
+          <a href="/usluge">Ugovori sa firmama</a>
+          <a href="/usluge">Reklamiranje</a>
         </div>
         <div>
           <h6>Cool Taxi</h6>
-          <a href="o-nama.html">O nama</a>
-          <a href="aplikacija.html">Aplikacija</a>
-          <a href="kontakt.html">Kontakt</a>
-          <a href="usluge.html#zahtev">Pošalji upit</a>
+          <a href="/o-nama">O nama</a>
+          <a href="/aplikacija">Aplikacija</a>
+          <a href="/kontakt">Kontakt</a>
+          <a href="/usluge#zahtev">Pošalji upit</a>
         </div>
         <div>
           <h6>Kontakt</h6>
@@ -105,12 +105,42 @@
 })();
 
 // global form handler (used on usluge + kontakt)
-function submitForm(e){
+const WEB3FORMS_KEY = 'a05da62e-48c2-4a57-8558-95f5017f2129';
+
+async function submitForm(e){
   e.preventDefault();
   const f = e.target;
-  const t = f.querySelector('.form-thanks');
-  if (t) t.classList.add('show');
-  f.querySelectorAll('input, select, textarea').forEach(i => { if (i.type !== 'checkbox') i.value = ''; });
+  const thanks = f.querySelector('.form-thanks');
+  const btn = f.querySelector('button[type="submit"]');
+
+  let subject = 'Nova poruka — Cool Taxi sajt';
+  if (f.classList.contains('hire-form'))            subject = 'Aplikacija za vozača — Cool Taxi';
+  else if (f.classList.contains('cm-form'))         subject = 'Kontakt poruka — Cool Taxi';
+  else if (f.classList.contains('request-form'))    subject = 'Rezervacija vožnje — Cool Taxi';
+
+  const data = new FormData(f);
+  data.append('access_key', WEB3FORMS_KEY);
+  data.append('subject', subject);
+  data.append('from_name', 'Cool Taxi sajt');
+
+  const originalBtnHTML = btn ? btn.innerHTML : '';
+  if (btn) { btn.disabled = true; btn.innerHTML = 'Slanje…'; }
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+    const json = await res.json();
+    if (json.success) {
+      if (thanks) thanks.classList.add('show');
+      f.querySelectorAll('input, select, textarea').forEach(i => { if (i.type !== 'checkbox') i.value = ''; });
+    } else {
+      alert('Greška pri slanju: ' + (json.message || 'pokušajte ponovo.'));
+    }
+  } catch (err) {
+    alert('Greška u mreži. Pokušajte ponovo ili nas pozovite direktno.');
+  } finally {
+    if (btn) { btn.disabled = false; btn.innerHTML = originalBtnHTML; }
+  }
+
   return false;
 }
 

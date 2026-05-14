@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://taxikragujevac.com/</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://taxikragujevac.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxikragujevac.com/"/>
+    <image:image>
+      <image:loc>https://taxikragujevac.com/assets/hero-car.jpg</image:loc>
+      <image:title>Cool Taxi Kragujevac — taksi prevoz</image:title>
+      <image:caption>Najveća taksi flota u Kragujevcu, 140+ vozila</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://taxikragujevac.com/uploads/2.jpg</image:loc>
+      <image:title>Cool Taxi flota u centru Kragujevca</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://taxikragujevac.com/usluge</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://taxikragujevac.com/usluge"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxikragujevac.com/usluge"/>
+    <image:image>
+      <image:loc>https://taxikragujevac.com/uploads/uslugetransparent.png</image:loc>
+      <image:title>Cool Taxi usluge — Kragujevac</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://taxikragujevac.com/o-nama</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://taxikragujevac.com/o-nama"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxikragujevac.com/o-nama"/>
+    <image:image>
+      <image:loc>https://taxikragujevac.com/uploads/2.jpg</image:loc>
+      <image:title>Cool Taxi tim i flota</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://taxikragujevac.com/aplikacija</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://taxikragujevac.com/aplikacija"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxikragujevac.com/aplikacija"/>
+    <image:image>
+      <image:loc>https://taxikragujevac.com/assets/app-mockup.png</image:loc>
+      <image:title>Cool Taxi aplikacija — iOS i Android</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://taxikragujevac.com/kontakt</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sr-RS" href="https://taxikragujevac.com/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxikragujevac.com/kontakt"/>
+  </url>
+
+</urlset>
