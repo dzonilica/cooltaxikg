@@ -1,7 +1,7 @@
 /* ───── tokens ───── */
 :root{
   --green:#7DC242;
-  --green-deep:#5fa029;
+  --green-deep:#4d8a1f;
   --green-soft:#eef7e2;
   --green-pale:#f7fbf0;
   --ink:#101510;
@@ -1579,14 +1579,14 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
   display:grid;grid-template-columns:1fr 2fr;gap:80px;
   position:relative;z-index:2;
 }
-.foot-brand p{color:rgba(255,255,255,.5);font-size:14px;margin-top:16px}
+.foot-brand p{color:rgba(255,255,255,.7);font-size:14px;margin-top:16px}
 .foot-brand .brand-mark{margin-bottom:16px}
 .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
 .foot-cols h6,
 .foot-cols .foot-col-h{
   font-family:"Geist Mono",monospace;
   font-size:11px;font-weight:600;letter-spacing:.12em;
-  color:rgba(255,255,255,.4);
+  color:rgba(255,255,255,.65);
   text-transform:uppercase;
   margin:0 0 18px;
 }
@@ -1600,7 +1600,7 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
   max-width:1280px;margin:0 auto;
   display:flex;justify-content:space-between;
   padding-top:24px;border-top:1px solid rgba(255,255,255,.08);
-  font-family:"Geist Mono",monospace;font-size:12px;color:rgba(255,255,255,.4);
+  font-family:"Geist Mono",monospace;font-size:12px;color:rgba(255,255,255,.65);
   position:relative;z-index:2;
 }
 .foot-watermark{

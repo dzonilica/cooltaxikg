@@ -76,8 +76,21 @@
 
   // nav scroll bg
   const nav = document.getElementById('nav');
-  const onScroll = () => nav && nav.classList.toggle('scrolled', window.scrollY > 20);
-  window.addEventListener('scroll', onScroll); onScroll();
+  let scrolled = false;
+  let rafPending = false;
+  const onScroll = () => {
+    if (rafPending) return;
+    rafPending = true;
+    requestAnimationFrame(() => {
+      const next = window.scrollY > 20;
+      if (next !== scrolled && nav) {
+        nav.classList.toggle('scrolled', next);
+        scrolled = next;
+      }
+      rafPending = false;
+    });
+  };
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
   // burger
   const burger = document.getElementById('burger');
