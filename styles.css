@@ -3947,7 +3947,7 @@ body[data-page="home"] .nav:not(.scrolled) .nav-links.open a.active{color:var(--
 @media (max-width:720px){
   .app-showcase{padding:80px 18px}
   .aps-visual{min-height:460px}
-  .aps-phone{max-height:480px}
+  .aps-phone{max-width:240px;max-height:400px}
   .aps-float-rating{left:0}
   .aps-float-free{right:0}
   .aps-float-stat{left:0}
