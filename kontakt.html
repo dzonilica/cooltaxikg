@@ -126,7 +126,25 @@
 </head>
 <body data-page="contact">
 
-<div id="site-nav"></div>
+<header class="nav" id="nav">
+  <a class="brand" href="/" aria-label="Cool Taxi">
+    <img src="assets/logo.webp" alt="Cool Taxi" class="brand-logo" width="200" height="97" decoding="async">
+  </a>
+  <nav class="nav-links">
+    <a href="/" data-p="home">Početna</a>
+    <a href="/o-nama" data-p="about">O nama</a>
+    <a href="/usluge" data-p="services">Usluge</a>
+    <a href="/aplikacija" data-p="app">Aplikacija</a>
+    <a href="/kontakt" data-p="contact" class="active">Kontakt</a>
+  </nav>
+  <a href="tel:034200555" class="nav-cta">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    034 200 555
+  </a>
+  <button class="nav-burger" id="burger" aria-label="Meni">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
 <section class="contact-hero">
   <div class="ch-bg-grid"></div>
@@ -338,7 +356,46 @@
   </div>
 </section>
 
-<div id="site-foot"></div>
+<footer class="foot">
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="assets/logo.webp" alt="Cool Taxi" class="brand-logo big" width="200" height="97" loading="lazy" decoding="async">
+      <p>Najveća taksi flota u Kragujevcu. Od 2016.</p>
+    </div>
+    <div class="foot-cols">
+      <div>
+        <h4 class="foot-col-h">Usluge</h4>
+        <a href="/usluge">Gradske vožnje</a>
+        <a href="/usluge">Međugradske</a>
+        <a href="/usluge">Inostrane</a>
+        <a href="/usluge">Ugovori sa firmama</a>
+        <a href="/usluge">Reklamiranje</a>
+      </div>
+      <div>
+        <h4 class="foot-col-h">Cool Taxi</h4>
+        <a href="/o-nama">O nama</a>
+        <a href="/aplikacija">Aplikacija</a>
+        <a href="/kontakt">Kontakt</a>
+        <a href="/usluge#zahtev">Pošalji upit</a>
+      </div>
+      <div>
+        <h4 class="foot-col-h">Kontakt</h4>
+        <a href="tel:034200555">034 200 555</a>
+        <a href="https://wa.me/381695200555">069 5200 555</a>
+        <a href="mailto:taxicool034@gmail.com">taxicool034@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2016—2026 Cool Taxi · Sva prava zadržava Cool Taxi</span>
+    <span class="foot-time" id="foot-time">— : —</span>
+  </div>
+  <div class="foot-watermark">COOLTAXI</div>
+</footer>
+<a href="tel:034200555" class="fab" aria-label="Pozovi 034 200 555">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  <span class="fab-pulse"></span>
+</a>
 <script src="script.js" defer></script>
 </body>
 </html>
