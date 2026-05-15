@@ -74,23 +74,17 @@
     if (a.dataset.p === active) a.classList.add('active');
   });
 
-  // nav scroll bg
+  // nav scroll bg — IntersectionObserver avoids layout reads on scroll
   const nav = document.getElementById('nav');
-  let scrolled = false;
-  let rafPending = false;
-  const onScroll = () => {
-    if (rafPending) return;
-    rafPending = true;
-    requestAnimationFrame(() => {
-      const next = window.scrollY > 20;
-      if (next !== scrolled && nav) {
-        nav.classList.toggle('scrolled', next);
-        scrolled = next;
-      }
-      rafPending = false;
-    });
-  };
-  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  if (nav) {
+    const sentinel = document.createElement('div');
+    sentinel.style.cssText = 'position:absolute;top:20px;left:0;width:1px;height:1px;pointer-events:none';
+    sentinel.setAttribute('aria-hidden', 'true');
+    document.body.prepend(sentinel);
+    new IntersectionObserver(([e]) => {
+      nav.classList.toggle('scrolled', !e.isIntersecting);
+    }, { rootMargin: '0px', threshold: 0 }).observe(sentinel);
+  }
 
   // burger
   const burger = document.getElementById('burger');
