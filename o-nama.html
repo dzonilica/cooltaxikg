@@ -29,7 +29,7 @@
 <meta property="og:title" content="O nama — Cool Taxi Kragujevac · Od 2016.">
 <meta property="og:description" content="Najveća taksi flota u Kragujevcu — 140+ vozila, 200 vozača, 1.2M+ uspešnih vožnji. Naša priča, vrednosti i tim.">
 <meta property="og:url" content="https://taxikragujevac.com/o-nama">
-<meta property="og:image" content="https://taxikragujevac.com/uploads/2.jpg">
+<meta property="og:image" content="https://taxikragujevac.com/uploads/2.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Cool Taxi flota u Kragujevcu">
@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="O nama — Cool Taxi Kragujevac">
 <meta name="twitter:description" content="Najveća taksi flota u Kragujevcu — od 2016.">
-<meta name="twitter:image" content="https://taxikragujevac.com/uploads/2.jpg">
+<meta name="twitter:image" content="https://taxikragujevac.com/uploads/2.webp">
 
 <link rel="icon" type="image/png" href="uploads/logozatab.png">
 <link rel="shortcut icon" href="uploads/logozatab.png">
@@ -46,7 +46,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="uploads/autotransparent.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="styles.css">
 
 <script type="application/ld+json">
@@ -63,7 +65,7 @@
       "isPartOf": {"@id": "https://taxikragujevac.com/#website"},
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://taxikragujevac.com/uploads/2.jpg"
+        "url": "https://taxikragujevac.com/uploads/2.webp"
       },
       "about": {"@id": "https://taxikragujevac.com/#organization"}
     },
@@ -158,7 +160,7 @@
       <!-- stage sa autom -->
       <div class="ah-stage">
         <div class="ah-stage-glow"></div>
-        <img src="uploads/autotransparent.png" alt="Cool Taxi vozilo" class="ah-car">
+        <img src="uploads/autotransparent.webp" alt="Cool Taxi vozilo" class="ah-car" width="1024" height="767" fetchpriority="high" decoding="async">
         <div class="ah-stage-shadow"></div>
       </div>
 
@@ -197,7 +199,7 @@
     <!-- LEVO: foto sa značkama -->
     <div class="as-photo">
       <div class="as-photo-frame">
-        <img src="uploads/2.jpg" alt="Cool Taxi flota u Kragujevcu">
+        <img src="uploads/2.webp" alt="Cool Taxi flota u Kragujevcu" width="1200" height="1600" loading="lazy" decoding="async">
         <div class="as-photo-badge">
           <span class="as-photo-badge-dot"></span>
           Flota u centru · Kragujevac
@@ -286,7 +288,7 @@
   <div class="ag-bento">
     <!-- Glavna featured ploča (top-left, span 2x2) -->
     <a class="ag-tile ag-tile-feature">
-      <img src="uploads/2.jpg" alt="Cool Taxi flota" style="object-position:center 75%">
+      <img src="uploads/2.webp" alt="Cool Taxi flota" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:center 75%">
       <div class="ag-tile-overlay">
         <div class="ag-tile-tag">★ FEATURED</div>
         <strong>Flota u centru</strong>
@@ -296,38 +298,38 @@
 
     <!-- Tall desni (span 2 rows) -->
     <a class="ag-tile ag-tile-tall">
-      <img src="uploads/7.jpg" alt="Cool Taxi vozač iz Kragujevca" loading="lazy">
+      <img src="uploads/7.webp" alt="Cool Taxi vozač iz Kragujevca" width="1240" height="1653" loading="lazy" decoding="async">
       <span class="ag-tile-num">02</span>
     </a>
 
     <!-- Mali kvadrat -->
     <a class="ag-tile">
-      <img src="uploads/3.jpg" alt="Cool Taxi vozilo na taksi stajalištu u Kragujevcu" loading="lazy" style="object-position:center 80%">
+      <img src="uploads/3.webp" alt="Cool Taxi vozilo na taksi stajalištu u Kragujevcu" width="1240" height="1653" loading="lazy" decoding="async" style="object-position:center 80%">
       <span class="ag-tile-num">03</span>
     </a>
 
     <!-- Mali kvadrat -->
     <a class="ag-tile">
-      <img src="uploads/8.jpg" alt="Taksi prevoz Kragujevac — Cool Taxi flota" loading="lazy" style="object-position:center 75%">
+      <img src="uploads/8.webp" alt="Taksi prevoz Kragujevac — Cool Taxi flota" width="1654" height="1240" loading="lazy" decoding="async" style="object-position:center 75%">
       <span class="ag-tile-num">04</span>
     </a>
 
     <!-- Wide donji (span 2 cols) -->
     <a class="ag-tile ag-tile-wide">
-      <img src="uploads/4.jpg" alt="Cool Taxi vozni park — hibridna i električna taksi vozila" loading="lazy" style="object-position:center 82%">
+      <img src="uploads/4.webp" alt="Cool Taxi vozni park — hibridna i električna taksi vozila" width="1651" height="1238" loading="lazy" decoding="async" style="object-position:center 82%">
       <span class="ag-tile-num">05</span>
       <div class="ag-tile-corner">Vozni park · Hibrid + EV</div>
     </a>
 
     <!-- Mali kvadrat -->
     <a class="ag-tile">
-      <img src="uploads/5.jpg" alt="Cool Taxi vozilo — kragujevac taxi" loading="lazy">
+      <img src="uploads/5.webp" alt="Cool Taxi vozilo — kragujevac taxi" width="1654" height="1240" loading="lazy" decoding="async">
       <span class="ag-tile-num">06</span>
     </a>
 
     <!-- Mali kvadrat -->
     <a class="ag-tile">
-      <img src="uploads/10.jpg" alt="Cool Taxi flota u Kragujevcu — moderna taksi vozila" loading="lazy" style="object-position:center 75%">
+      <img src="uploads/10.webp" alt="Cool Taxi flota u Kragujevcu — moderna taksi vozila" width="1651" height="1238" loading="lazy" decoding="async" style="object-position:center 75%">
       <span class="ag-tile-num">07</span>
     </a>
   </div>

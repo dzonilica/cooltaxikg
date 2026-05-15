@@ -315,13 +315,17 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
   overflow:hidden;
   background:#0a0a08;
 }
-.hero-video-bg video{
+.hero-video-bg video,
+.hero-video-poster{
   position:absolute;inset:0;
   width:100%;height:100%;
   object-fit:cover;
   filter:saturate(1.05) contrast(1.05);
   transform:scale(1.02);
 }
+.hero-video-poster{z-index:0}
+.hero-video-bg video{z-index:1;opacity:0;transition:opacity .4s ease}
+.hero-video-bg video.is-ready{opacity:1}
 .hero-video-overlay{
   position:absolute;inset:0;
   background:
@@ -1295,7 +1299,7 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
   font-family:"Geist Mono",monospace;font-size:12px;color:var(--ink-3);
   margin-bottom:14px;
 }
-.qr-card img{width:100%;display:block;border-radius:6px}
+.qr-card img{width:100%;height:auto;display:block;border-radius:6px;aspect-ratio:1/1}
 .qr-card-foot{
   display:flex;justify-content:space-between;
   margin-top:14px;font-size:11px;color:var(--ink-3);
@@ -1389,7 +1393,7 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
   color:var(--ink-3);letter-spacing:.06em;
   margin-bottom:10px;text-transform:uppercase;font-weight:700;
 }
-.app-float-qr img{width:100%;display:block;border-radius:6px}
+.app-float-qr img{width:100%;height:auto;display:block;border-radius:6px;aspect-ratio:1/1}
 .aqr-foot{
   margin-top:8px;
   font-family:"Geist Mono",monospace;font-size:10px;
@@ -1578,12 +1582,13 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
 .foot-brand p{color:rgba(255,255,255,.5);font-size:14px;margin-top:16px}
 .foot-brand .brand-mark{margin-bottom:16px}
 .foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-.foot-cols h6{
+.foot-cols h6,
+.foot-cols .foot-col-h{
   font-family:"Geist Mono",monospace;
-  font-size:11px;letter-spacing:.12em;
+  font-size:11px;font-weight:600;letter-spacing:.12em;
   color:rgba(255,255,255,.4);
   text-transform:uppercase;
-  margin-bottom:18px;
+  margin:0 0 18px;
 }
 .foot-cols a{
   display:block;color:rgba(255,255,255,.7);
@@ -3401,11 +3406,13 @@ body[data-page="home"] .nav:not(.scrolled) .nav-links.open a.active{color:var(--
   position:absolute;top:28px;right:28px;
   box-shadow:0 8px 20px -8px rgba(125,194,66,.6);
 }
+.how-step h3,
 .how-step h4{
   font-family:"Bricolage Grotesque",sans-serif;
   font-size:22px;font-weight:700;letter-spacing:-.02em;
   color:#fff;
   padding-right:48px;
+  margin:0;
 }
 .how-step p{
   font-size:14.5px;color:rgba(255,255,255,.7);line-height:1.6;

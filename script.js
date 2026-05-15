@@ -4,7 +4,7 @@
   const navHTML = `
   <header class="nav" id="nav">
     <a class="brand" href="/" aria-label="Cool Taxi">
-      <img src="assets/logo.png" alt="Cool Taxi" class="brand-logo">
+      <img src="assets/logo.webp" alt="Cool Taxi" class="brand-logo" width="358" height="175" decoding="async">
     </a>
     <nav class="nav-links">
       <a href="/" data-p="home">Početna</a>
@@ -26,12 +26,12 @@
   <footer class="foot">
     <div class="foot-top">
       <div class="foot-brand">
-        <img src="assets/logo.png" alt="Cool Taxi" class="brand-logo big">
+        <img src="assets/logo.webp" alt="Cool Taxi" class="brand-logo big" width="358" height="175" loading="lazy" decoding="async">
         <p>Najveća taksi flota u Kragujevcu. Od 2016.</p>
       </div>
       <div class="foot-cols">
         <div>
-          <h6>Usluge</h6>
+          <h4 class="foot-col-h">Usluge</h4>
           <a href="/usluge">Gradske vožnje</a>
           <a href="/usluge">Međugradske</a>
           <a href="/usluge">Inostrane</a>
@@ -39,14 +39,14 @@
           <a href="/usluge">Reklamiranje</a>
         </div>
         <div>
-          <h6>Cool Taxi</h6>
+          <h4 class="foot-col-h">Cool Taxi</h4>
           <a href="/o-nama">O nama</a>
           <a href="/aplikacija">Aplikacija</a>
           <a href="/kontakt">Kontakt</a>
           <a href="/usluge#zahtev">Pošalji upit</a>
         </div>
         <div>
-          <h6>Kontakt</h6>
+          <h4 class="foot-col-h">Kontakt</h4>
           <a href="tel:034200555">034 200 555</a>
           <a href="https://wa.me/381695200555">069 5200 555</a>
           <a href="mailto:taxicool034@gmail.com">taxicool034@gmail.com</a>
@@ -206,4 +206,27 @@ async function submitForm(e){
     else if (e.key === 'ArrowLeft') show(idx - 1);
     else if (e.key === 'ArrowRight') show(idx + 1);
   });
+})();
+
+/* lazy hero video — load only after page is interactive, skip on slow/save-data */
+(function(){
+  const v = document.querySelector('.hero-video-bg video[data-src]');
+  if (!v) return;
+  const conn = navigator.connection || {};
+  if (conn.saveData) return;
+  if (conn.effectiveType && /(^|-)2g$/.test(conn.effectiveType)) return;
+
+  const start = () => {
+    const src = v.dataset.src;
+    if (!src || v.src) return;
+    v.src = src;
+    v.load();
+    const ready = () => { v.classList.add('is-ready'); v.play().catch(()=>{}); };
+    v.addEventListener('canplay', ready, { once: true });
+  };
+  if (document.readyState === 'complete') {
+    setTimeout(start, 200);
+  } else {
+    window.addEventListener('load', () => setTimeout(start, 200), { once: true });
+  }
 })();

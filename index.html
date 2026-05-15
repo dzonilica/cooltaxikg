@@ -32,7 +32,7 @@
 <meta property="og:title" content="Cool Taxi Kragujevac — Taksi prevoz 24/7 · 034 200 555">
 <meta property="og:description" content="Najveća taksi flota u Kragujevcu — 140+ vozila, dolazak za 3 minuta, plaćanje karticom u svakom autu. Gradske, međugradske i inostrane vožnje.">
 <meta property="og:url" content="https://taxikragujevac.com/">
-<meta property="og:image" content="https://taxikragujevac.com/assets/hero-car.jpg">
+<meta property="og:image" content="https://taxikragujevac.com/assets/hero-car.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Cool Taxi Kragujevac — taksi prevoz">
@@ -42,7 +42,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Cool Taxi Kragujevac — Taksi prevoz 24/7">
 <meta name="twitter:description" content="140+ vozila, dolazak za 3 minuta, plaćanje karticom. Pozovi 034 200 555.">
-<meta name="twitter:image" content="https://taxikragujevac.com/assets/hero-car.jpg">
+<meta name="twitter:image" content="https://taxikragujevac.com/assets/hero-car.webp">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="uploads/logozatab.png">
@@ -53,9 +53,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-<link rel="preload" as="image" href="assets/logo.png">
+<link rel="preload" as="image" href="assets/hero-poster.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/logo.webp" type="image/webp">
 
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Async fonts (non-render-blocking) -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="styles.css">
 
 <!-- JSON-LD: Organization + WebSite + LocalBusiness/TaxiService + FAQ -->
@@ -75,7 +78,7 @@
         "width": 512,
         "height": 512
       },
-      "image": "https://taxikragujevac.com/assets/hero-car.jpg",
+      "image": "https://taxikragujevac.com/assets/hero-car.webp",
       "telephone": "+381-34-200-555",
       "email": "taxicool034@gmail.com",
       "foundingDate": "2016",
@@ -128,9 +131,9 @@
       "@id": "https://taxikragujevac.com/#localbusiness",
       "name": "Cool Taxi Kragujevac",
       "image": [
-        "https://taxikragujevac.com/uploads/2.jpg",
-        "https://taxikragujevac.com/uploads/6.jpg",
-        "https://taxikragujevac.com/uploads/9.jpg"
+        "https://taxikragujevac.com/uploads/2.webp",
+        "https://taxikragujevac.com/uploads/6.webp",
+        "https://taxikragujevac.com/uploads/9.webp"
       ],
       "logo": "https://taxikragujevac.com/uploads/logozatab.png",
       "url": "https://taxikragujevac.com/",
@@ -236,9 +239,8 @@
 
 <section class="hero hero-video" id="home" data-screen-label="01 Hero">
   <div class="hero-video-bg">
-    <video autoplay muted loop playsinline preload="auto">
-      <source src="assets/hero-video.mp4" type="video/mp4">
-    </video>
+    <img src="assets/hero-poster.webp" alt="" class="hero-video-poster" width="1600" height="1199" fetchpriority="high" decoding="async">
+    <video muted loop playsinline preload="none" poster="assets/hero-poster.webp" aria-hidden="true" data-src="assets/hero-video.mp4"></video>
     <div class="hero-video-overlay"></div>
     <div class="hero-video-grain"></div>
   </div>
@@ -307,9 +309,9 @@
     <!-- DESNO: foto mozaik + plutajuce kartice -->
     <div class="wc-visual">
       <div class="wc-mosaic">
-        <div class="wcm-tile wcm-main"><img src="uploads/2.jpg" alt="Cool Taxi vozilo"></div>
-        <div class="wcm-tile wcm-side wcm-side-top"><img src="uploads/6.jpg" alt="Cool Taxi vozač"></div>
-        <div class="wcm-tile wcm-side wcm-side-bot"><img src="uploads/9.jpg" alt="Cool Taxi flota"></div>
+        <div class="wcm-tile wcm-main"><img src="uploads/2.webp" alt="Cool Taxi vozilo" width="1200" height="1600" loading="lazy" decoding="async"></div>
+        <div class="wcm-tile wcm-side wcm-side-top"><img src="uploads/6.webp" alt="Cool Taxi vozač" width="1200" height="1600" loading="lazy" decoding="async"></div>
+        <div class="wcm-tile wcm-side wcm-side-bot"><img src="uploads/9.webp" alt="Cool Taxi flota" width="1200" height="1600" loading="lazy" decoding="async"></div>
       </div>
 
       <!-- ETA / live vožnja -->
@@ -399,7 +401,7 @@
         <div class="app-rings">
           <span></span><span></span><span></span>
         </div>
-        <img src="assets/app-mockup.png" alt="Cool Taxi aplikacija na iPhone telefonima — App Store i Google Play prikaz" class="app-mockup-img">
+        <img src="assets/app-mockup.webp" alt="Cool Taxi aplikacija na iPhone telefonima — App Store i Google Play prikaz" class="app-mockup-img" width="589" height="884" loading="lazy" decoding="async">
 
         <!-- Floating: QR card -->
         <div class="app-float app-float-qr">
@@ -407,7 +409,7 @@
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v3M14 20h3M20 20v.01"/></svg>
             Skeniraj
           </div>
-          <img src="assets/qr-cooltaxi.png" alt="QR kod za preuzimanje aplikacije">
+          <img src="assets/qr-cooltaxi.webp" alt="QR kod za preuzimanje aplikacije" width="688" height="688" loading="lazy" decoding="async">
           <div class="aqr-foot">iOS · Android</div>
         </div>
 
@@ -450,7 +452,7 @@
     </div>
     <div class="strip-visual">
       <div class="strip-photo">
-        <img src="assets/card-payment.jpg" alt="Plaćanje karticom u Cool Taxi vozilu — POS terminal">
+        <img src="assets/card-payment.webp" alt="Plaćanje karticom u Cool Taxi vozilu — POS terminal" width="700" height="1050" loading="lazy" decoding="async">
         <div class="strip-photo-badge">
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
           Odobreno · 1.240 RSD
@@ -476,12 +478,12 @@
   </div>
 
   <div class="gallery-grid">
-    <div class="g-tile"><img src="uploads/1.jpg" alt="Cool Taxi vozilo na ulicama Kragujevca" loading="lazy" style="object-position:center 70%"></div>
-    <div class="g-tile"><img src="uploads/2.jpg" alt="Cool Taxi flota — taksi vozila u Kragujevcu" loading="lazy" style="object-position:center 70%"></div>
-    <div class="g-tile"><img src="uploads/3.jpg" alt="Taksi prevoz Kragujevac — Cool Taxi vozilo u akciji" loading="lazy" style="object-position:center 80%"></div>
-    <div class="g-tile"><img src="uploads/4.jpg" alt="Cool Taxi vozač i putnik" loading="lazy"></div>
-    <div class="g-tile"><img src="uploads/5.jpg" alt="Cool Taxi vozilo — taxi Kragujevac" loading="lazy"></div>
-    <div class="g-tile"><img src="uploads/6.jpg" alt="Cool Taxi vozač pored taksi vozila u Kragujevcu" loading="lazy" style="object-position:center 70%"></div>
+    <div class="g-tile"><img src="uploads/1.webp" alt="Cool Taxi vozilo na ulicama Kragujevca" loading="lazy" decoding="async" width="1240" height="1653" style="object-position:center 70%"></div>
+    <div class="g-tile"><img src="uploads/2.webp" alt="Cool Taxi flota — taksi vozila u Kragujevcu" loading="lazy" decoding="async" width="1200" height="1600" style="object-position:center 70%"></div>
+    <div class="g-tile"><img src="uploads/3.webp" alt="Taksi prevoz Kragujevac — Cool Taxi vozilo u akciji" loading="lazy" decoding="async" width="1240" height="1653" style="object-position:center 80%"></div>
+    <div class="g-tile"><img src="uploads/4.webp" alt="Cool Taxi vozač i putnik" loading="lazy" decoding="async" width="1651" height="1238"></div>
+    <div class="g-tile"><img src="uploads/5.webp" alt="Cool Taxi vozilo — taxi Kragujevac" loading="lazy" decoding="async" width="1654" height="1240"></div>
+    <div class="g-tile"><img src="uploads/6.webp" alt="Cool Taxi vozač pored taksi vozila u Kragujevcu" loading="lazy" decoding="async" width="1200" height="1600" style="object-position:center 70%"></div>
   </div>
 </section>
 
