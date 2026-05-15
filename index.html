@@ -240,7 +240,9 @@
 <section class="hero hero-video" id="home" data-screen-label="01 Hero">
   <div class="hero-video-bg">
     <img src="assets/hero-poster.webp" alt="" class="hero-video-poster" width="1600" height="1199" fetchpriority="high" decoding="async">
-    <video muted loop playsinline preload="none" poster="assets/hero-poster.webp" aria-hidden="true" data-src="assets/hero-video.mp4"></video>
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.webp" aria-hidden="true">
+      <source src="assets/hero-video.mp4" type="video/mp4">
+    </video>
     <div class="hero-video-overlay"></div>
     <div class="hero-video-grain"></div>
   </div>

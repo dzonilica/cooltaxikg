@@ -208,25 +208,26 @@ async function submitForm(e){
   });
 })();
 
-/* lazy hero video — load only after page is interactive, skip on slow/save-data */
+/* hero video — fade in when ready, drop on Data Saver to save bandwidth */
 (function(){
-  const v = document.querySelector('.hero-video-bg video[data-src]');
+  const v = document.querySelector('.hero-video-bg video');
   if (!v) return;
-  const conn = navigator.connection || {};
-  if (conn.saveData) return;
-  if (conn.effectiveType && /(^|-)2g$/.test(conn.effectiveType)) return;
 
-  const start = () => {
-    const src = v.dataset.src;
-    if (!src || v.src) return;
-    v.src = src;
+  const conn = navigator.connection || {};
+  if (conn.saveData || (conn.effectiveType && /(^|-)2g$/.test(conn.effectiveType))) {
+    v.removeAttribute('autoplay');
+    v.removeAttribute('preload');
+    const src = v.querySelector('source');
+    if (src) src.removeAttribute('src');
     v.load();
-    const ready = () => { v.classList.add('is-ready'); v.play().catch(()=>{}); };
-    v.addEventListener('canplay', ready, { once: true });
-  };
-  if (document.readyState === 'complete') {
-    setTimeout(start, 200);
-  } else {
-    window.addEventListener('load', () => setTimeout(start, 200), { once: true });
+    return;
   }
+
+  if (v.readyState >= 3) {
+    v.classList.add('is-ready');
+  } else {
+    v.addEventListener('canplay', () => v.classList.add('is-ready'), { once: true });
+  }
+  const tryPlay = () => v.play().catch(() => {});
+  v.addEventListener('loadeddata', tryPlay, { once: true });
 })();
