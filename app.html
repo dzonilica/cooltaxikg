@@ -85,9 +85,9 @@ p{color:#3a3a3a;margin-bottom:32px;font-size:15px}
 <body>
 <div class="box">
   <div class="logo">ct</div>
-  <div class="detected" id="detected">Detektujem uređaj…</div>
-  <h1>Preuzimanje <em>Cool Taxi</em> aplikacije</h1>
-  <p>Preusmeravamo te na pravu prodavnicu aplikacija za tvoj uređaj.</p>
+  <div class="detected" id="detected" data-en="Detecting your device…">Detektujem uređaj…</div>
+  <h1 id="title-h1"><span data-en="Downloading">Preuzimanje</span> <em>Cool Taxi</em> <span data-en="app">aplikacije</span></h1>
+  <p data-en="We're sending you to the right app store for your device.">Preusmeravamo te na pravu prodavnicu aplikacija za tvoj uređaj.</p>
   <div class="spinner"></div>
   <div class="choice">
     <a href="https://apps.apple.com/" class="ios">App Store (iOS)</a>
@@ -97,20 +97,34 @@ p{color:#3a3a3a;margin-bottom:32px;font-size:15px}
 </div>
 <script>
 (function(){
+  // pull stored language (same key as i18n.js)
+  let lang = 'sr';
+  try { lang = localStorage.getItem('cooltaxi-lang') || 'sr'; } catch(e){}
+  const isEn = lang === 'en';
+  document.documentElement.lang = isEn ? 'en' : 'sr-RS';
+
+  // apply text translations from data-en
+  document.querySelectorAll('[data-en]').forEach(el => {
+    if (isEn) el.textContent = el.getAttribute('data-en');
+  });
+
   const ua = navigator.userAgent || navigator.vendor || window.opera || '';
   const det = document.getElementById('detected');
   const isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
   const isAndroid = /android/i.test(ua);
   const iosUrl = 'https://apps.apple.com/';
   const androidUrl = 'https://play.google.com/';
+  const msgs = isEn
+    ? { ios: '✓ iOS detected — App Store', and: '✓ Android detected — Google Play', desktop: '✓ Desktop — pick a platform' }
+    : { ios: '✓ iOS detektovan — App Store', and: '✓ Android detektovan — Google Play', desktop: '✓ Desktop — izaberi platformu' };
   if (isIOS) {
-    det.textContent = '✓ iOS detektovan — App Store';
+    det.textContent = msgs.ios;
     setTimeout(() => location.href = iosUrl, 1500);
   } else if (isAndroid) {
-    det.textContent = '✓ Android detektovan — Google Play';
+    det.textContent = msgs.and;
     setTimeout(() => location.href = androidUrl, 1500);
   } else {
-    det.textContent = '✓ Desktop — izaberi platformu';
+    det.textContent = msgs.desktop;
   }
 })();
 </script>

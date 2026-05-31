@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>O nama — Cool Taxi Kragujevac · Najveća taksi flota u Kragujevcu</title>
-<meta name="description" content="Cool Taxi Kragujevac od 2016. — 140+ vozila, 200 vozača, 1.2M+ vožnji. Saznaj priču o najvećoj taksi floti u Kragujevcu, naše vrednosti i kako radimo 24/7.">
+<title data-en="About — Cool Taxi Kragujevac · The largest taxi fleet in town">O nama — Cool Taxi Kragujevac · Najveća taksi flota u Kragujevcu</title>
+<meta name="description" content="Cool Taxi Kragujevac od 2016. — 140+ vozila, 200 vozača, 1.2M+ vožnji. Saznaj priču o najvećoj taksi floti u Kragujevcu, naše vrednosti i kako radimo 24/7." data-en-content="Cool Taxi Kragujevac since 2016 — 140+ cars, 200 drivers, 1.2M+ rides. The story behind Kragujevac's biggest taxi fleet, our values, and how we run 24/7.">
 <meta name="keywords" content="cool taxi kragujevac, o nama taxi kragujevac, taxi prevoz kragujevac, taksi kragujevac, cool taxi, najveća taxi flota kragujevac, taxi kg, kragujevac taxi">
 <meta name="author" content="Cool Taxi Kragujevac">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
@@ -26,18 +26,18 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cool Taxi Kragujevac">
-<meta property="og:title" content="O nama — Cool Taxi Kragujevac · Od 2016.">
-<meta property="og:description" content="Najveća taksi flota u Kragujevcu — 140+ vozila, 200 vozača, 1.2M+ uspešnih vožnji. Naša priča, vrednosti i tim.">
+<meta property="og:title" content="O nama — Cool Taxi Kragujevac · Od 2016." data-en-content="About — Cool Taxi Kragujevac · Since 2016">
+<meta property="og:description" content="Najveća taksi flota u Kragujevcu — 140+ vozila, 200 vozača, 1.2M+ uspešnih vožnji. Naša priča, vrednosti i tim." data-en-content="The largest taxi fleet in Kragujevac — 140+ cars, 200 drivers, 1.2M+ rides completed. Our story, values, and team.">
 <meta property="og:url" content="https://taxikragujevac.com/o-nama">
 <meta property="og:image" content="https://taxikragujevac.com/uploads/2.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Cool Taxi flota u Kragujevcu">
+<meta property="og:image:alt" content="Cool Taxi flota u Kragujevcu" data-en-content="Cool Taxi fleet in Kragujevac">
 <meta property="og:locale" content="sr_RS">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="O nama — Cool Taxi Kragujevac">
-<meta name="twitter:description" content="Najveća taksi flota u Kragujevcu — od 2016.">
+<meta name="twitter:title" content="O nama — Cool Taxi Kragujevac" data-en-content="About — Cool Taxi Kragujevac">
+<meta name="twitter:description" content="Najveća taksi flota u Kragujevcu — od 2016." data-en-content="The largest taxi fleet in Kragujevac — since 2016.">
 <meta name="twitter:image" content="https://taxikragujevac.com/uploads/2.webp">
 
 <link rel="icon" type="image/png" href="uploads/logozatab.png">
@@ -50,6 +50,8 @@
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="styles.css">
+
+<script src="i18n.js" defer></script>
 
 <script type="application/ld+json">
 {
@@ -106,17 +108,21 @@
     <img src="assets/logo.webp" alt="Cool Taxi" class="brand-logo" width="200" height="97" decoding="async">
   </a>
   <nav class="nav-links">
-    <a href="/" data-p="home">Početna</a>
-    <a href="/o-nama" data-p="about" class="active">O nama</a>
-    <a href="/usluge" data-p="services">Usluge</a>
-    <a href="/aplikacija" data-p="app">Aplikacija</a>
-    <a href="/kontakt" data-p="contact">Kontakt</a>
+    <a href="/" data-p="home" data-en="Home">Početna</a>
+    <a href="/o-nama" data-p="about" class="active" data-en="About">O nama</a>
+    <a href="/usluge" data-p="services" data-en="Services">Usluge</a>
+    <a href="/aplikacija" data-p="app" data-en="App">Aplikacija</a>
+    <a href="/kontakt" data-p="contact" data-en="Contact">Kontakt</a>
   </nav>
+  <button class="lang-switch" type="button" aria-label="Promeni jezik">
+    <span class="lang-opt" data-l="sr">SR</span>
+    <span class="lang-opt" data-l="en">EN</span>
+  </button>
   <a href="tel:034200555" class="nav-cta">
     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     034 200 555
   </a>
-  <button class="nav-burger" id="burger" aria-label="Meni">
+  <button class="nav-burger" id="burger" aria-label="Meni" data-en-aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </header>
@@ -132,29 +138,29 @@
     <div class="ah-text">
       <span class="kicker">
         <span class="dot"></span>
-        01 — O nama · Cool Taxi Kragujevac
+        <span data-en="01 — About · Cool Taxi Kragujevac">01 — O nama · Cool Taxi Kragujevac</span>
       </span>
       <h1 class="ah-head">
-        Deset godina<br>
-        za <em>volanom</em><br>
-        grada.
+        <span data-en="Ten years">Deset godina</span><br>
+        <span data-en="behind the">za</span> <em data-en="wheel">volanom</em><br>
+        <span data-en="of this town.">grada.</span>
       </h1>
-      <p class="ah-sub">
+      <p class="ah-sub" data-en="Cool Taxi Kragujevac started back in 2016. We began with a handful of cars — today we're the biggest taxi fleet in town, with 140+ cars and 200 drivers moving Kragujevac around every day.">
         Cool Taxi Kragujevac je nastao 2016. godine. Počeli smo sa šačicom vozila — danas smo najveća taksi flota u gradu, sa 140+ vozila i 200 vozača koji svakog dana voze Kragujevčane.
       </p>
 
       <div class="ah-meta">
-        <div><b>★ 4.9</b><span>prosek ocena</span></div>
-        <div><b>10</b><span>Godina postojanja</span></div>
-        <div><b>24/7</b><span>uvek aktivni</span></div>
+        <div><b>★ 4.9</b><span data-en="rating average">prosek ocena</span></div>
+        <div><b>10</b><span data-en="years on the road">Godina postojanja</span></div>
+        <div><b>24/7</b><span data-en="always on">uvek aktivni</span></div>
       </div>
 
       <div class="ah-ctas">
         <a href="tel:034200555" class="btn btn-primary">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Pozovi 034 200 555
+          <span data-en="Call 034 200 555">Pozovi 034 200 555</span>
         </a>
-        <a href="#story" class="btn btn-ghost">Pročitaj priču</a>
+        <a href="#story" class="btn btn-ghost" data-en="Read the story">Pročitaj priču</a>
       </div>
     </div>
 
@@ -167,7 +173,7 @@
       <div class="ah-tick ah-tick-1">
         <span class="ah-tick-dot"></span>
         <span class="ah-tick-line"></span>
-        <span class="ah-tick-label">FLOTA · 140+ VOZILA</span>
+        <span class="ah-tick-label" data-en="FLEET · 140+ CARS">FLOTA · 140+ VOZILA</span>
       </div>
       <div class="ah-tick ah-tick-2">
         <span class="ah-tick-label">ETA · 3 MIN</span>
@@ -178,7 +184,7 @@
       <!-- stage sa autom -->
       <div class="ah-stage">
         <div class="ah-stage-glow"></div>
-        <img src="uploads/autotransparent.webp" alt="Cool Taxi vozilo" class="ah-car" width="1024" height="767" fetchpriority="high" decoding="async">
+        <img src="uploads/autotransparent.webp" alt="Cool Taxi vozilo" data-en-alt="Cool Taxi car" class="ah-car" width="1024" height="767" fetchpriority="high" decoding="async">
         <div class="ah-stage-shadow"></div>
       </div>
 
@@ -186,7 +192,7 @@
       <div class="ah-badge ah-badge-est">
         <span class="ah-badge-top">★ EST. KG ★</span>
         <strong>2016</strong>
-        <span class="ah-badge-bot">10 GODINA</span>
+        <span class="ah-badge-bot" data-en="10 YEARS">10 GODINA</span>
       </div>
 
       <!-- Rating badge -->
@@ -194,7 +200,7 @@
         <div class="ah-rating-num">4.9</div>
         <div class="ah-rating-info">
           <span class="ah-rating-stars">★★★★★</span>
-          <span>1.842 ocene</span>
+          <span data-en="1,842 reviews">1.842 ocene</span>
         </div>
       </div>
     </div>
@@ -203,10 +209,10 @@
 
   <!-- Bottom stats bar -->
   <div class="ah-stats">
-    <div><b>2016</b><span>od osnivanja</span></div>
-    <div><b>140+</b><span>vozila</span></div>
-    <div><b>200</b><span>vozača</span></div>
-    <div><b>★ 4.9</b><span>prosek ocena</span></div>
+    <div><b>2016</b><span data-en="since founding">od osnivanja</span></div>
+    <div><b>140+</b><span data-en="cars">vozila</span></div>
+    <div><b>200</b><span data-en="drivers">vozača</span></div>
+    <div><b>★ 4.9</b><span data-en="rating average">prosek ocena</span></div>
   </div>
 </section>
 
@@ -217,15 +223,15 @@
     <!-- LEVO: foto sa značkama -->
     <div class="as-photo">
       <div class="as-photo-frame">
-        <img src="uploads/2.webp" alt="Cool Taxi flota u Kragujevcu" width="1200" height="1600" loading="lazy" decoding="async">
+        <img src="uploads/2.webp" alt="Cool Taxi flota u Kragujevcu" data-en-alt="Cool Taxi fleet in Kragujevac" width="1200" height="1600" loading="lazy" decoding="async">
         <div class="as-photo-badge">
           <span class="as-photo-badge-dot"></span>
-          Flota u centru · Kragujevac
+          <span data-en="Fleet downtown · Kragujevac">Flota u centru · Kragujevac</span>
         </div>
         <div class="as-photo-stamp">
           <span class="as-stamp-top">★ EST · KG ★</span>
           <strong>2016</strong>
-          <span class="as-stamp-bot">10 GODINA</span>
+          <span class="as-stamp-bot" data-en="10 YEARS">10 GODINA</span>
         </div>
       </div>
       <!-- Mali dekorativni decoration trakica iza fotografije -->
@@ -236,18 +242,18 @@
     <div class="as-content">
       <span class="kicker">
         <span class="dot"></span>
-        Naša priča · Established 2016
+        <span data-en="Our story · Established 2016">Naša priča · Established 2016</span>
       </span>
-      <h2 class="big-head">Naša <em>priča</em></h2>
+      <h2 class="big-head"><span data-en="Our">Naša</span> <em data-en="story">priča</em></h2>
 
       <div class="as-text">
-        <p class="lead">
+        <p class="lead" data-en="Cool Taxi was founded in 2016 with one clear idea — to make taxi service in Kragujevac better, more modern, and within reach for everyone.">
           Cool Taxi je osnovan 2016. sa jasnom vizijom — učiniti taxi prevoz u Kragujevcu kvalitetnijim, modernijim i dostupnijim svim građanima.
         </p>
-        <p>
+        <p data-en="From day one we focused on what actually matters: showing up fast, a nice ride, and fair prices. Today, with a fleet of over 140 cars and 200 drivers, we cover the whole city and beyond — intercity, cross-border rides, corporate contracts.">
           Od prvog dana smo se fokusirali na ono što je najvažnije: brzo stizanje, prijatnu vožnju i poštene cene. Danas, sa flotom od preko 140 vozila i 200 vozača, pokrivamo ceo grad i šire — međugradske, inostrane vožnje, korporativne ugovore.
         </p>
-        <p>
+        <p data-en="Every car has GPS, a POS terminal, and air-conditioning — no exceptions.">
          Svako vozilo je opremljeno GPS sistemom, POS terminalom i klimom — bez izuzetka.
         </p>
       </div>
@@ -259,32 +265,32 @@
           <div class="as-value-icon">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
-          <strong>Pouzdanost</strong>
-          <span>Uvek stižemo na vreme — prosek 3 minuta u centru.</span>
+          <strong data-en="Reliable">Pouzdanost</strong>
+          <span data-en="We show up on time — about 3 minutes in the center.">Uvek stižemo na vreme — prosek 3 minuta u centru.</span>
         </div>
         <div class="as-value">
           <span class="as-value-num">02</span>
           <div class="as-value-icon">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 4 9 8 10 4-1 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
-          <strong>Bezbednost</strong>
-          <span>GPS praćenje, osiguranje, provereni vozači.</span>
+          <strong data-en="Safe">Bezbednost</strong>
+          <span data-en="GPS tracking, insurance, vetted drivers.">GPS praćenje, osiguranje, provereni vozači.</span>
         </div>
         <div class="as-value">
           <span class="as-value-num">03</span>
           <div class="as-value-icon">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
           </div>
-          <strong>Ljubaznost</strong>
-          <span>Profesionalni i prijatni vozači — svaki put.</span>
+          <strong data-en="Friendly">Ljubaznost</strong>
+          <span data-en="Professional, kind drivers — every single ride.">Profesionalni i prijatni vozači — svaki put.</span>
         </div>
         <div class="as-value">
           <span class="as-value-num">04</span>
           <div class="as-value-icon">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
-          <strong>Fer cene</strong>
-          <span>Transparentno, bez skrivenih troškova ili noćnih tarifa.</span>
+          <strong data-en="Fair prices">Fer cene</strong>
+          <span data-en="Transparent, no hidden fees, no night surcharges.">Transparentno, bez skrivenih troškova ili noćnih tarifa.</span>
         </div>
       </div>
     </div>
@@ -297,57 +303,57 @@
   <div class="ag-head">
     <span class="kicker">
       <span class="dot"></span>
-      Galerija · Iza scene
+      <span data-en="Gallery · Behind the scenes">Galerija · Iza scene</span>
     </span>
-    <h2 class="big-head">Cool Taxi u <em>akciji</em></h2>
-    <p>Vozila, vozači, momenti — sve što čini Cool Taxi priču. Svakodnevni rad jedne od najvećih flota u Srbiji.</p>
+    <h2 class="big-head"><span data-en="Cool Taxi in">Cool Taxi u</span> <em data-en="action">akciji</em></h2>
+    <p data-en="Cars, drivers, little moments — everything that makes the Cool Taxi story. The day-to-day of one of the biggest fleets in Serbia.">Vozila, vozači, momenti — sve što čini Cool Taxi priču. Svakodnevni rad jedne od najvećih flota u Srbiji.</p>
   </div>
 
   <div class="ag-bento">
     <!-- Glavna featured ploča (top-left, span 2x2) -->
     <a class="ag-tile ag-tile-feature">
-      <img src="uploads/2.webp" alt="Cool Taxi flota" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:center 75%">
+      <img src="uploads/2.webp" alt="Cool Taxi flota" data-en-alt="Cool Taxi fleet" width="1200" height="1600" loading="lazy" decoding="async" style="object-position:center 75%">
       <div class="ag-tile-overlay">
         <div class="ag-tile-tag">★ FEATURED</div>
-        <strong>Flota u centru</strong>
-        <span>140+ vozila · Kragujevac, 2025.</span>
+        <strong data-en="Fleet downtown">Flota u centru</strong>
+        <span data-en="140+ cars · Kragujevac, 2025">140+ vozila · Kragujevac, 2025.</span>
       </div>
     </a>
 
     <!-- Tall desni (span 2 rows) -->
     <a class="ag-tile ag-tile-tall">
-      <img src="uploads/7.webp" alt="Cool Taxi vozač iz Kragujevca" width="1240" height="1653" loading="lazy" decoding="async">
+      <img src="uploads/7.webp" alt="Cool Taxi vozač iz Kragujevca" data-en-alt="Cool Taxi driver from Kragujevac" width="1240" height="1653" loading="lazy" decoding="async">
       <span class="ag-tile-num">02</span>
     </a>
 
     <!-- Mali kvadrat -->
     <a class="ag-tile">
-      <img src="uploads/3.webp" alt="Cool Taxi vozilo na taksi stajalištu u Kragujevcu" width="1240" height="1653" loading="lazy" decoding="async" style="object-position:center 80%">
+      <img src="uploads/3.webp" alt="Cool Taxi vozilo na taksi stajalištu u Kragujevcu" data-en-alt="Cool Taxi car at a taxi stand in Kragujevac" width="1240" height="1653" loading="lazy" decoding="async" style="object-position:center 80%">
       <span class="ag-tile-num">03</span>
     </a>
 
     <!-- Mali kvadrat -->
     <a class="ag-tile">
-      <img src="uploads/8.webp" alt="Taksi prevoz Kragujevac — Cool Taxi flota" width="1654" height="1240" loading="lazy" decoding="async" style="object-position:center 75%">
+      <img src="uploads/8.webp" alt="Taksi prevoz Kragujevac — Cool Taxi flota" data-en-alt="Taxi service Kragujevac — Cool Taxi fleet" width="1654" height="1240" loading="lazy" decoding="async" style="object-position:center 75%">
       <span class="ag-tile-num">04</span>
     </a>
 
     <!-- Wide donji (span 2 cols) -->
     <a class="ag-tile ag-tile-wide">
-      <img src="uploads/4.webp" alt="Cool Taxi vozni park — hibridna i električna taksi vozila" width="1651" height="1238" loading="lazy" decoding="async" style="object-position:center 82%">
+      <img src="uploads/4.webp" alt="Cool Taxi vozni park — hibridna i električna taksi vozila" data-en-alt="Cool Taxi fleet — hybrid and electric taxi cars" width="1651" height="1238" loading="lazy" decoding="async" style="object-position:center 82%">
       <span class="ag-tile-num">05</span>
-      <div class="ag-tile-corner">Vozni park · Hibrid + EV</div>
+      <div class="ag-tile-corner" data-en="Fleet · Hybrid + EV">Vozni park · Hibrid + EV</div>
     </a>
 
     <!-- Mali kvadrat -->
     <a class="ag-tile">
-      <img src="uploads/5.webp" alt="Cool Taxi vozilo — kragujevac taxi" width="1654" height="1240" loading="lazy" decoding="async">
+      <img src="uploads/5.webp" alt="Cool Taxi vozilo — kragujevac taxi" data-en-alt="Cool Taxi car — kragujevac taxi" width="1654" height="1240" loading="lazy" decoding="async">
       <span class="ag-tile-num">06</span>
     </a>
 
     <!-- Mali kvadrat -->
     <a class="ag-tile">
-      <img src="uploads/10.webp" alt="Cool Taxi flota u Kragujevcu — moderna taksi vozila" width="1651" height="1238" loading="lazy" decoding="async" style="object-position:center 75%">
+      <img src="uploads/10.webp" alt="Cool Taxi flota u Kragujevcu — moderna taksi vozila" data-en-alt="Cool Taxi fleet in Kragujevac — modern taxi cars" width="1651" height="1238" loading="lazy" decoding="async" style="object-position:center 75%">
       <span class="ag-tile-num">07</span>
     </a>
   </div>
@@ -356,22 +362,22 @@
   <div class="ag-foot">
     <div class="ag-foot-item">
       <strong>140+</strong>
-      <span>vozila u floti</span>
+      <span data-en="cars in the fleet">vozila u floti</span>
     </div>
     <div class="ag-foot-divider"></div>
     <div class="ag-foot-item">
       <strong>200</strong>
-      <span>aktivnih vozača</span>
+      <span data-en="active drivers">aktivnih vozača</span>
     </div>
     <div class="ag-foot-divider"></div>
     <div class="ag-foot-item">
       <strong>24/7</strong>
-      <span>sve dane u godini</span>
+      <span data-en="every day of the year">sve dane u godini</span>
     </div>
     <div class="ag-foot-divider"></div>
     <div class="ag-foot-item">
       <strong>1.2M+</strong>
-      <span>uspešnih vožnji</span>
+      <span data-en="rides completed">uspešnih vožnji</span>
     </div>
   </div>
 </section>
@@ -380,14 +386,14 @@
 <section class="cta-band">
   <div class="cta-inner">
     <h2 class="big-head light">
-      Zanimaju te <em>usluge</em>,<br>
-      potrebna neka informacija?
+      <span data-en="Interested in our">Zanimaju te</span> <em data-en="services">usluge</em><span data-en=",">,</span><br>
+      <span data-en="or need a bit more info?">potrebna neka informacija?</span>
     </h2>
     <div class="cta-actions">
-      <a href="/kontakt" class="btn btn-primary cta-green">Stupi u kontakt
+      <a href="/kontakt" class="btn btn-primary cta-green"><span data-en="Get in touch">Stupi u kontakt</span>
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <a href="/usluge" class="btn btn-ghost light">Pogledaj usluge</a>
+      <a href="/usluge" class="btn btn-ghost light" data-en="See what we do">Pogledaj usluge</a>
     </div>
   </div>
 </section>
@@ -396,26 +402,26 @@
   <div class="foot-top">
     <div class="foot-brand">
       <img src="assets/logo.webp" alt="Cool Taxi" class="brand-logo big" width="200" height="97" loading="lazy" decoding="async">
-      <p>Najveća taksi flota u Kragujevcu. Od 2016.</p>
+      <p data-en="The largest taxi fleet in Kragujevac. Since 2016.">Najveća taksi flota u Kragujevcu. Od 2016.</p>
     </div>
     <div class="foot-cols">
       <div>
-        <h4 class="foot-col-h">Usluge</h4>
-        <a href="/usluge">Gradske vožnje</a>
-        <a href="/usluge">Međugradske</a>
-        <a href="/usluge">Inostrane</a>
-        <a href="/usluge">Ugovori sa firmama</a>
-        <a href="/usluge">Reklamiranje</a>
+        <h4 class="foot-col-h" data-en="Services">Usluge</h4>
+        <a href="/usluge" data-en="City rides">Gradske vožnje</a>
+        <a href="/usluge" data-en="Intercity">Međugradske</a>
+        <a href="/usluge" data-en="Cross-border">Inostrane</a>
+        <a href="/usluge" data-en="Corporate contracts">Ugovori sa firmama</a>
+        <a href="/usluge" data-en="Advertising">Reklamiranje</a>
       </div>
       <div>
         <h4 class="foot-col-h">Cool Taxi</h4>
-        <a href="/o-nama">O nama</a>
-        <a href="/aplikacija">Aplikacija</a>
-        <a href="/kontakt">Kontakt</a>
-        <a href="/usluge#zahtev">Pošalji upit</a>
+        <a href="/o-nama" data-en="About">O nama</a>
+        <a href="/aplikacija" data-en="App">Aplikacija</a>
+        <a href="/kontakt" data-en="Contact">Kontakt</a>
+        <a href="/usluge#zahtev" data-en="Send inquiry">Pošalji upit</a>
       </div>
       <div>
-        <h4 class="foot-col-h">Kontakt</h4>
+        <h4 class="foot-col-h" data-en="Contact">Kontakt</h4>
         <a href="tel:034200555">034 200 555</a>
         <a href="https://wa.me/381695200555">069 5200 555</a>
         <a href="mailto:taxicool034@gmail.com">taxicool034@gmail.com</a>
@@ -423,12 +429,12 @@
     </div>
   </div>
   <div class="foot-bottom">
-    <span>© 2016—2026 Cool Taxi · Sva prava zadržava Cool Taxi</span>
+    <span data-en="© 2016—2026 Cool Taxi · All rights reserved">© 2016—2026 Cool Taxi · Sva prava zadržava Cool Taxi</span>
     <span class="foot-time" id="foot-time">— : —</span>
   </div>
   <div class="foot-watermark">COOLTAXI</div>
 </footer>
-<a href="tel:034200555" class="fab" aria-label="Pozovi 034 200 555">
+<a href="tel:034200555" class="fab" aria-label="Pozovi 034 200 555" data-en-aria-label="Call 034 200 555">
   <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
   <span class="fab-pulse"></span>
 </a>

@@ -30,11 +30,15 @@
   // footer time
   function tick(){
     const d = new Date();
-    const t = d.toLocaleTimeString('sr-RS',{hour:'2-digit',minute:'2-digit',second:'2-digit',timeZone:'Europe/Belgrade'});
+    const isEn = (document.documentElement.getAttribute('data-lang') === 'en');
+    const locale = isEn ? 'en-GB' : 'sr-RS';
+    const t = d.toLocaleTimeString(locale,{hour:'2-digit',minute:'2-digit',second:'2-digit',timeZone:'Europe/Belgrade'});
+    const tail = isEn ? 'cars active' : 'vozila aktivna';
     const el = document.getElementById('foot-time');
-    if (el) el.textContent = `Kragujevac · ${t} · vozila aktivna`;
+    if (el) el.textContent = `Kragujevac · ${t} · ${tail}`;
   }
   setInterval(tick, 1000); tick();
+  document.addEventListener('langchange', tick);
 })();
 
 // global form handler (used on usluge + kontakt)
@@ -45,11 +49,12 @@ async function submitForm(e){
   const f = e.target;
   const thanks = f.querySelector('.form-thanks');
   const btn = f.querySelector('button[type="submit"]');
+  const isEn = (document.documentElement.getAttribute('data-lang') === 'en');
 
-  let subject = 'Nova poruka — Cool Taxi sajt';
-  if (f.classList.contains('hire-form'))            subject = 'Aplikacija za vozača — Cool Taxi';
-  else if (f.classList.contains('cm-form'))         subject = 'Kontakt poruka — Cool Taxi';
-  else if (f.classList.contains('request-form'))    subject = 'Rezervacija vožnje — Cool Taxi';
+  let subject = isEn ? 'New message — Cool Taxi site' : 'Nova poruka — Cool Taxi sajt';
+  if (f.classList.contains('hire-form'))            subject = isEn ? 'Driver application — Cool Taxi'  : 'Aplikacija za vozača — Cool Taxi';
+  else if (f.classList.contains('cm-form'))         subject = isEn ? 'Contact message — Cool Taxi'      : 'Kontakt poruka — Cool Taxi';
+  else if (f.classList.contains('request-form'))    subject = isEn ? 'Ride booking — Cool Taxi'         : 'Rezervacija vožnje — Cool Taxi';
 
   const data = new FormData(f);
   data.append('access_key', WEB3FORMS_KEY);
@@ -57,7 +62,7 @@ async function submitForm(e){
   data.append('from_name', 'Cool Taxi sajt');
 
   const originalBtnHTML = btn ? btn.innerHTML : '';
-  if (btn) { btn.disabled = true; btn.innerHTML = 'Slanje…'; }
+  if (btn) { btn.disabled = true; btn.innerHTML = isEn ? 'Sending…' : 'Slanje…'; }
 
   try {
     const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
@@ -66,10 +71,12 @@ async function submitForm(e){
       if (thanks) thanks.classList.add('show');
       f.querySelectorAll('input, select, textarea').forEach(i => { if (i.type !== 'checkbox') i.value = ''; });
     } else {
-      alert('Greška pri slanju: ' + (json.message || 'pokušajte ponovo.'));
+      const fallback = isEn ? 'please try again.' : 'pokušajte ponovo.';
+      const prefix   = isEn ? 'Send error: '     : 'Greška pri slanju: ';
+      alert(prefix + (json.message || fallback));
     }
   } catch (err) {
-    alert('Greška u mreži. Pokušajte ponovo ili nas pozovite direktno.');
+    alert(isEn ? 'Network error. Please try again or give us a call directly.' : 'Greška u mreži. Pokušajte ponovo ili nas pozovite direktno.');
   } finally {
     if (btn) { btn.disabled = false; btn.innerHTML = originalBtnHTML; }
   }
@@ -85,12 +92,16 @@ async function submitForm(e){
     .filter(g => g.length);
   if (!groups.length) return;
 
+  const isEn = (document.documentElement.getAttribute('data-lang') === 'en');
+  const lbLabels = isEn
+    ? { close: 'Close', prev: 'Previous', next: 'Next' }
+    : { close: 'Zatvori', prev: 'Prethodna', next: 'Sledeća' };
   const lb = document.createElement('div');
   lb.className = 'lightbox';
   lb.innerHTML = `
-    <button class="lightbox-close" aria-label="Zatvori">×</button>
-    <button class="lightbox-prev" aria-label="Prethodna">‹</button>
-    <button class="lightbox-next" aria-label="Sledeća">›</button>
+    <button class="lightbox-close" aria-label="${lbLabels.close}">×</button>
+    <button class="lightbox-prev" aria-label="${lbLabels.prev}">‹</button>
+    <button class="lightbox-next" aria-label="${lbLabels.next}">›</button>
     <div class="lightbox-stage"><img class="lightbox-img" alt=""></div>
     <div class="lightbox-counter"></div>`;
   document.body.appendChild(lb);

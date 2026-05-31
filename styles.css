@@ -3955,3 +3955,38 @@ body[data-page="home"] .nav:not(.scrolled) .nav-links.open a.active{color:var(--
   .aps-benefits{grid-template-columns:1fr}
   .aps-benefit{padding:20px 18px}
 }
+
+/* ===== Language switcher (SR / EN) ===== */
+.lang-switch{
+  display:inline-flex;align-items:center;gap:2px;
+  padding:4px;border-radius:999px;
+  background:rgba(0,0,0,.04);border:1px solid var(--line);
+  cursor:pointer;
+  font-family:"Geist Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.08em;
+  color:var(--ink-3);
+  transition:background .2s,border-color .2s,color .2s;
+  margin-left:auto;margin-right:10px;
+}
+.lang-switch:hover{background:rgba(0,0,0,.08)}
+.lang-switch .lang-opt{
+  padding:4px 9px;border-radius:999px;line-height:1;
+  transition:background .15s,color .15s;
+}
+.lang-switch[data-active="sr"] .lang-opt[data-l="sr"],
+.lang-switch[data-active="en"] .lang-opt[data-l="en"]{
+  background:var(--ink);color:#fff;
+}
+/* dark hero variant — home page, nav not scrolled */
+body[data-page="home"] .nav:not(.scrolled) .lang-switch{
+  background:rgba(255,255,255,.1);
+  border-color:rgba(255,255,255,.22);
+  color:rgba(255,255,255,.9);
+}
+body[data-page="home"] .nav:not(.scrolled) .lang-switch[data-active="sr"] .lang-opt[data-l="sr"],
+body[data-page="home"] .nav:not(.scrolled) .lang-switch[data-active="en"] .lang-opt[data-l="en"]{
+  background:#fff;color:var(--ink);
+}
+@media (max-width:720px){
+  .lang-switch{margin-left:auto;margin-right:6px;font-size:10.5px}
+  .lang-switch .lang-opt{padding:3px 7px}
+}

@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Taxi Kragujevac — Cool Taxi · 034 200 555 · Taksi prevoz 24/7</title>
-<meta name="description" content="Cool Taxi Kragujevac — taksi prevoz 24/7. Pozovi 034 200 555 ili Viber 069 5200 555. Gradske, međugradske i inostrane vožnje. 140+ vozila, plaćanje karticom, dolazak za 3 minuta.">
+<title data-en="Taxi Kragujevac — Cool Taxi · 034 200 555 · Taxi 24/7">Taxi Kragujevac — Cool Taxi · 034 200 555 · Taksi prevoz 24/7</title>
+<meta name="description" content="Cool Taxi Kragujevac — taksi prevoz 24/7. Pozovi 034 200 555 ili Viber 069 5200 555. Gradske, međugradske i inostrane vožnje. 140+ vozila, plaćanje karticom, dolazak za 3 minuta." data-en-content="Cool Taxi Kragujevac — taxi rides 24/7. Call 034 200 555 or Viber 069 5200 555. City, intercity and cross-border rides. 140+ cars, card payments, arriving in 3 minutes.">
 <meta name="keywords" content="taxi kragujevac, taksi kragujevac, cool taxi, cool taxi kragujevac, taxi prevoz kragujevac, prevoz kragujevac, taxi kg, kragujevac taxi, taksi kg, taksi prevoz, jeftin taxi kragujevac, taksi 034, taksi za aerodrom, međugradski taksi kragujevac">
 <meta name="author" content="Cool Taxi Kragujevac">
 <meta name="publisher" content="Cool Taxi Kragujevac">
@@ -29,19 +29,19 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cool Taxi Kragujevac">
-<meta property="og:title" content="Cool Taxi Kragujevac — Taksi prevoz 24/7 · 034 200 555">
-<meta property="og:description" content="Najveća taksi flota u Kragujevcu — 140+ vozila, dolazak za 3 minuta, plaćanje karticom u svakom autu. Gradske, međugradske i inostrane vožnje.">
+<meta property="og:title" content="Cool Taxi Kragujevac — Taksi prevoz 24/7 · 034 200 555" data-en-content="Cool Taxi Kragujevac — Taxi rides 24/7 · 034 200 555">
+<meta property="og:description" content="Najveća taksi flota u Kragujevcu — 140+ vozila, dolazak za 3 minuta, plaćanje karticom u svakom autu. Gradske, međugradske i inostrane vožnje." data-en-content="The largest taxi fleet in Kragujevac — 140+ cars, arriving in 3 minutes, card payments in every car. City, intercity and cross-border rides.">
 <meta property="og:url" content="https://taxikragujevac.com/">
 <meta property="og:image" content="https://taxikragujevac.com/assets/hero-car.webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Cool Taxi Kragujevac — taksi prevoz">
+<meta property="og:image:alt" content="Cool Taxi Kragujevac — taksi prevoz" data-en-content="Cool Taxi Kragujevac — taxi service">
 <meta property="og:locale" content="sr_RS">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cool Taxi Kragujevac — Taksi prevoz 24/7">
-<meta name="twitter:description" content="140+ vozila, dolazak za 3 minuta, plaćanje karticom. Pozovi 034 200 555.">
+<meta name="twitter:title" content="Cool Taxi Kragujevac — Taksi prevoz 24/7" data-en-content="Cool Taxi Kragujevac — Taxi rides 24/7">
+<meta name="twitter:description" content="140+ vozila, dolazak za 3 minuta, plaćanje karticom. Pozovi 034 200 555." data-en-content="140+ cars, arriving in 3 minutes, card payments. Call 034 200 555.">
 <meta name="twitter:image" content="https://taxikragujevac.com/assets/hero-car.webp">
 
 <!-- Favicon -->
@@ -113,6 +113,8 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
 
 <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+<script src="i18n.js" defer></script>
 
 <!-- JSON-LD: Organization + WebSite + LocalBusiness/TaxiService + FAQ -->
 <script type="application/ld+json">
@@ -293,17 +295,21 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
     <img src="assets/logo.webp" alt="Cool Taxi" class="brand-logo" width="200" height="97" decoding="async">
   </a>
   <nav class="nav-links">
-    <a href="/" data-p="home" class="active">Početna</a>
-    <a href="/o-nama" data-p="about">O nama</a>
-    <a href="/usluge" data-p="services">Usluge</a>
-    <a href="/aplikacija" data-p="app">Aplikacija</a>
-    <a href="/kontakt" data-p="contact">Kontakt</a>
+    <a href="/" data-p="home" class="active" data-en="Home">Početna</a>
+    <a href="/o-nama" data-p="about" data-en="About">O nama</a>
+    <a href="/usluge" data-p="services" data-en="Services">Usluge</a>
+    <a href="/aplikacija" data-p="app" data-en="App">Aplikacija</a>
+    <a href="/kontakt" data-p="contact" data-en="Contact">Kontakt</a>
   </nav>
+  <button class="lang-switch" type="button" aria-label="Promeni jezik">
+    <span class="lang-opt" data-l="sr">SR</span>
+    <span class="lang-opt" data-l="en">EN</span>
+  </button>
   <a href="tel:034200555" class="nav-cta">
     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
     034 200 555
   </a>
-  <button class="nav-burger" id="burger" aria-label="Meni">
+  <button class="nav-burger" id="burger" aria-label="Meni" data-en-aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </header>
@@ -320,34 +326,34 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
 
   <div class="hero-video-inner">
     <div class="hero-eyebrow light">
-      <span class="dot"></span> POUZDAN TAKSI PREVOZ · KRAGUJEVAC
+      <span class="dot"></span> <span data-en="RELIABLE TAXI · KRAGUJEVAC">POUZDAN TAKSI PREVOZ · KRAGUJEVAC</span>
     </div>
 
     <h1 class="hero-mega">
-      Vaš pouzdan<br>
+      <span data-en="Your reliable">Vaš pouzdan</span><br>
       <em>Cool Taxi</em><br>
-      u svakom trenutku
+      <span data-en="whenever you need one">u svakom trenutku</span>
     </h1>
 
     <p class="hero-mega-sub">
-      Brža, sigurna i udobna vožnja po gradu i van njega.<br>
-      Stižemo za par minuta — danju i noću.
+      <span data-en="Faster, safer, comfier rides — around town or out of it.">Brža, sigurna i udobna vožnja po gradu i van njega.</span><br>
+      <span data-en="We're there in minutes — day or night.">Stižemo za par minuta — danju i noću.</span>
     </p>
 
     <div class="hero-cta-row">
       <a href="tel:034200555" class="btn btn-primary btn-xl">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        POZOVI 034 200 555
+        <span data-en="CALL 034 200 555">POZOVI 034 200 555</span>
       </a>
-      <a href="/usluge" class="btn btn-ghost btn-xl light">
+      <a href="/usluge" class="btn btn-ghost btn-xl light" data-en="See what we do">
         Pogledaj usluge
       </a>
     </div>
 
     <div class="hero-quick-meta">
-      <div><span class="qm-dot"></span><b>Aktivan sada</b><i>· vozila u krugu od 1 km</i></div>
-      <div><b>140+</b><i>vozila u floti</i></div>
-      <div><b>★ 4.9</b><i>prosek 1.842 ocene</i></div>
+      <div><span class="qm-dot"></span><b data-en="Live right now">Aktivan sada</b><i data-en="· cars within 1 km">· vozila u krugu od 1 km</i></div>
+      <div><b>140+</b><i data-en="cars in the fleet">vozila u floti</i></div>
+      <div><b>★ 4.9</b><i data-en="from 1,842 reviews">prosek 1.842 ocene</i></div>
     </div>
   </div>
 
@@ -361,11 +367,11 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
 
     <!-- LEVO: editorial tekst -->
     <div class="wc-text">
-      <span class="kicker"><span class="dot"></span> Zašto baš Cool Taxi</span>
-      <h2 class="big-head">Uvek dostupni<br><em>Uvek</em> tu za vas.</h2>
+      <span class="kicker"><span class="dot"></span> <span data-en="Why Cool Taxi">Zašto baš Cool Taxi</span></span>
+      <h2 class="big-head"><span data-en="Always around,">Uvek dostupni</span><br><em data-en="always">Uvek</em> <span data-en="there for you.">tu za vas.</span></h2>
       <p class="wc-lede">
-        140+ vozila u floti, prosečno vreme dolaska 3 minuta, plaćanje karticom u svakom autu.
-       
+        <span data-en="140+ cars on the road, we usually show up in about 3 minutes, and yes — you can pay by card in every single one.">140+ vozila u floti, prosečno vreme dolaska 3 minuta, plaćanje karticom u svakom autu.</span>
+
       </p>
 
 
@@ -373,18 +379,18 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
       <div class="wc-ctas">
         <a href="tel:034200555" class="btn btn-primary">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Pozovi 034 200 555
+          <span data-en="Call 034 200 555">Pozovi 034 200 555</span>
         </a>
-        <a href="/aplikacija" class="btn btn-ghost">Preuzmi aplikaciju</a>
+        <a href="/aplikacija" class="btn btn-ghost" data-en="Get the app">Preuzmi aplikaciju</a>
       </div>
     </div>
 
     <!-- DESNO: foto mozaik + plutajuce kartice -->
     <div class="wc-visual">
       <div class="wc-mosaic">
-        <div class="wcm-tile wcm-main"><img src="uploads/2.webp" alt="Cool Taxi vozilo" width="1200" height="1600" loading="lazy" decoding="async"></div>
-        <div class="wcm-tile wcm-side wcm-side-top"><img src="uploads/6.webp" alt="Cool Taxi vozač" width="1200" height="1600" loading="lazy" decoding="async"></div>
-        <div class="wcm-tile wcm-side wcm-side-bot"><img src="uploads/9.webp" alt="Cool Taxi flota" width="1200" height="1600" loading="lazy" decoding="async"></div>
+        <div class="wcm-tile wcm-main"><img src="uploads/2.webp" alt="Cool Taxi vozilo" data-en-alt="Cool Taxi car" width="1200" height="1600" loading="lazy" decoding="async"></div>
+        <div class="wcm-tile wcm-side wcm-side-top"><img src="uploads/6.webp" alt="Cool Taxi vozač" data-en-alt="Cool Taxi driver" width="1200" height="1600" loading="lazy" decoding="async"></div>
+        <div class="wcm-tile wcm-side wcm-side-bot"><img src="uploads/9.webp" alt="Cool Taxi flota" data-en-alt="Cool Taxi fleet" width="1200" height="1600" loading="lazy" decoding="async"></div>
       </div>
 
       <!-- ETA / live vožnja -->
@@ -393,7 +399,7 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
         <div class="wcfeta-body">
-          <strong>Stiže za 2 min</strong>
+          <strong data-en="Arriving in 2 min">Stiže za 2 min</strong>
           <span>Marko · KG 2354-TX</span>
         </div>
         <div class="wcfeta-pulse"><span></span></div>
@@ -402,7 +408,7 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
       <!-- Flota -->
       <div class="wc-float wc-float-fleet">
         <div class="wcff-num">140<span>+</span></div>
-        <div class="wcff-meta">vozila u floti<br><i>aktivnih 24/7</i></div>
+        <div class="wcff-meta"><span data-en="cars in the fleet">vozila u floti</span><br><i data-en="active 24/7">aktivnih 24/7</i></div>
       </div>
 
       <!-- Rating -->
@@ -410,18 +416,18 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
         <div class="wcfr-stars">★★★★★</div>
         <div class="wcfr-body">
           <strong>4.9</strong>
-          <span>1.842 ocene</span>
+          <span data-en="1,842 reviews">1.842 ocene</span>
         </div>
       </div>
 
       <!-- Fiksna cena -->
       <div class="wc-float wc-float-price">
-        <div class="wcfp-head">► Centar → Aerodrom Niš</div>
+        <div class="wcfp-head" data-en="► Center → Niš Airport">► Centar → Aerodrom Niš</div>
         <div class="wcfp-row">
-          <span>Fiksna cena</span>
+          <span data-en="Flat rate">Fiksna cena</span>
           <strong>XXXX <i>RSD</i></strong>
         </div>
-        <div class="wcfp-foot">Po dogovoru</div>
+        <div class="wcfp-foot" data-en="By arrangement">Po dogovoru</div>
       </div>
     </div>
 
@@ -429,41 +435,41 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
 
   <div class="wc-foot">
     <div class="hero-rotator">
-      <span>do posla</span><span>do aerodroma</span><span>do kuće</span><span>preko granice</span><span>na vreme</span>
+      <span data-en="to work">do posla</span><span data-en="to the airport">do aerodroma</span><span data-en="back home">do kuće</span><span data-en="across the border">preko granice</span><span data-en="on time">na vreme</span>
     </div>
   </div>
 </section>
 
 <div class="ticker">
   <div class="ticker-track">
-    <span>● Plaćanje karticom u svakom vozilu</span><span>● Pozovi 034 200 555</span><span>● Naruči preko Vibera 069 5200 555</span><span>● Međugradske i inostrane vožnje</span><span>● Korporativni ugovori</span><span>● Reklame na krovnim svetlima i tabletima</span>
-    <span>● Plaćanje karticom u svakom vozilu</span><span>● Pozovi 034 200 555</span><span>● Naruči preko Vibera 069 5200 555</span><span>● Međugradske i inostrane vožnje</span><span>● Korporativni ugovori</span><span>● Reklame na krovnim svetlima i tabletima</span>
+    <span data-en="● Card payments in every car">● Plaćanje karticom u svakom vozilu</span><span data-en="● Call 034 200 555">● Pozovi 034 200 555</span><span data-en="● Book on Viber 069 5200 555">● Naruči preko Vibera 069 5200 555</span><span data-en="● Intercity and cross-border rides">● Međugradske i inostrane vožnje</span><span data-en="● Corporate contracts">● Korporativni ugovori</span><span data-en="● Ads on roof signs and in-car tablets">● Reklame na krovnim svetlima i tabletima</span>
+    <span data-en="● Card payments in every car">● Plaćanje karticom u svakom vozilu</span><span data-en="● Call 034 200 555">● Pozovi 034 200 555</span><span data-en="● Book on Viber 069 5200 555">● Naruči preko Vibera 069 5200 555</span><span data-en="● Intercity and cross-border rides">● Međugradske i inostrane vožnje</span><span data-en="● Corporate contracts">● Korporativni ugovori</span><span data-en="● Ads on roof signs and in-car tablets">● Reklame na krovnim svetlima i tabletima</span>
   </div>
 </div>
 <section class="app" id="aplikacija" data-screen-label="06 Aplikacija">
   <div class="app-bg-grid"></div>
   <div class="app-inner">
     <div class="app-text">
-      <span class="kicker">06 — Aplikacija</span>
+      <span class="kicker" data-en="06 — App">06 — Aplikacija</span>
       <h2 class="big-head">
-        Tvoj sledeći taksi<br>
-        je u <em>tvom telefonu</em>.
+        <span data-en="Your next ride">Tvoj sledeći taksi</span><br>
+        <span data-en="is on">je u</span> <em data-en="your phone">tvom telefonu</em>.
       </h2>
-      <p>Cool Taxi aplikacija — naručivanje sa lokacije, izbor vozila, omiljene rute, istorija vožnji, plaćanje karticom unapred. Bez čekanja na liniji.</p>
+      <p data-en="Cool Taxi app — order from where you are, pick the car, save favorite routes, see your ride history, pay by card upfront. No waiting on the line.">Cool Taxi aplikacija — naručivanje sa lokacije, izbor vozila, omiljene rute, istorija vožnji, plaćanje karticom unapred. Bez čekanja na liniji.</p>
 
       <div class="app-feats">
-        <div><strong>Naruči u 2 dodira</strong><span>Vrlo lako i brzo, pregledan interfejs.</span></div>      
-        <div><strong>Lako dostupno</strong><span>Cool taxi aplikacija i na Play Store-u i na App Store-u.</span></div>    
+        <div><strong data-en="Book in 2 taps">Naruči u 2 dodira</strong><span data-en="Quick and easy, clean layout.">Vrlo lako i brzo, pregledan interfejs.</span></div>
+        <div><strong data-en="Everywhere">Lako dostupno</strong><span data-en="The Cool Taxi app is on both Play Store and App Store.">Cool taxi aplikacija i na Play Store-u i na App Store-u.</span></div>
       </div>
 
       <div class="app-stores">
         <a href="/aplikacija" class="store">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-          <div><span>Preuzmi na</span><strong>App Store</strong></div>
+          <div><span data-en="Download on">Preuzmi na</span><strong>App Store</strong></div>
         </a>
         <a href="/aplikacija" class="store">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M3.609 1.814 13.792 12 3.609 22.186a.996.996 0 0 1-.61-.92V2.734c0-.36.213-.687.61-.92zm10.89 10.893 2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198 2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.069 12l2.629-2.491zM5.864 2.658 16.802 8.99l-2.302 2.303L5.864 2.658z"/></svg>
-          <div><span>Preuzmi sa</span><strong>Google Play</strong></div>
+          <div><span data-en="Get it on">Preuzmi sa</span><strong>Google Play</strong></div>
         </a>
       </div>
     </div>
@@ -474,15 +480,15 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
         <div class="app-rings">
           <span></span><span></span><span></span>
         </div>
-        <img src="assets/app-mockup.webp" alt="Cool Taxi aplikacija na iPhone telefonima — App Store i Google Play prikaz" class="app-mockup-img" width="589" height="884" loading="lazy" decoding="async">
+        <img src="assets/app-mockup.webp" alt="Cool Taxi aplikacija na iPhone telefonima — App Store i Google Play prikaz" data-en-alt="Cool Taxi app on iPhone — App Store and Google Play preview" class="app-mockup-img" width="589" height="884" loading="lazy" decoding="async">
 
         <!-- Floating: QR card -->
         <div class="app-float app-float-qr">
           <div class="aqr-head">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3zM20 14v3M14 20h3M20 20v.01"/></svg>
-            Skeniraj
+            <span data-en="Scan">Skeniraj</span>
           </div>
-          <img src="assets/qr-cooltaxi.webp" alt="QR kod za preuzimanje aplikacije" width="688" height="688" loading="lazy" decoding="async">
+          <img src="assets/qr-cooltaxi.webp" alt="QR kod za preuzimanje aplikacije" data-en-alt="QR code to download the app" width="688" height="688" loading="lazy" decoding="async">
           <div class="aqr-foot">iOS · Android</div>
         </div>
 
@@ -492,8 +498,8 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
           <div class="anotif-text">
-            <strong>Vozilo dolazi</strong>
-            <span>Marko · 4 min · Toyota C-HR</span>
+            <strong data-en="Car on the way">Vozilo dolazi</strong>
+            <span data-en="Marko · 4 min · Toyota C-HR">Marko · 4 min · Toyota C-HR</span>
           </div>
           <div class="anotif-pulse"><span></span></div>
         </div>
@@ -514,21 +520,21 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
 <section class="strip" data-screen-label="04 Kartica">
   <div class="strip-inner">
     <div class="strip-text">
-      <span class="kicker">04 — Plaćanje</span>
+      <span class="kicker" data-en="04 — Payments">04 — Plaćanje</span>
       <h2 class="big-head light">
-        Prvi i jedini taksi<br>
-        sa opcijom <em>plaćanja karticom</em><br>
-        u <em>svakom</em> vozilu.
+        <span data-en="The first and only taxi">Prvi i jedini taksi</span><br>
+        <span data-en="with the option to">sa opcijom</span> <em data-en="pay by card">plaćanja karticom</em><br>
+        <span data-en="in">u</span> <em data-en="every">svakom</em> <span data-en="car.">vozilu.</span>
       </h2>
-      <p>Svaki naš auto ima POS terminal koji prima sve, vrlo brzo i jednostavno placanje.</p>
+      <p data-en="Every car of ours has a POS terminal that takes everything — quick and easy payment.">Svaki naš auto ima POS terminal koji prima sve, vrlo brzo i jednostavno placanje.</p>
 
     </div>
     <div class="strip-visual">
       <div class="strip-photo">
-        <img src="assets/card-payment.webp" alt="Plaćanje karticom u Cool Taxi vozilu — POS terminal" width="700" height="1050" loading="lazy" decoding="async">
+        <img src="assets/card-payment.webp" alt="Plaćanje karticom u Cool Taxi vozilu — POS terminal" data-en-alt="Card payment in a Cool Taxi car — POS terminal" width="700" height="1050" loading="lazy" decoding="async">
         <div class="strip-photo-badge">
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          Odobreno · 1.240 RSD
+          <span data-en="Approved · 1,240 RSD">Odobreno · 1.240 RSD</span>
         </div>
         <div class="strip-photo-tag">
           <span class="tag-dot"></span>
@@ -544,27 +550,27 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
   <div class="gallery-head">
     <span class="gallery-pill">
       <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-      GALERIJA
+      <span data-en="GALLERY">GALERIJA</span>
     </span>
-    <h2 class="big-head">Naša flota u <em>akciji</em></h2>
-    <p>Moderna, čista i udobna vozila za svaku vožnju.</p>
+    <h2 class="big-head"><span data-en="Our fleet in">Naša flota u</span> <em data-en="action">akciji</em></h2>
+    <p data-en="Modern, clean, comfortable cars — for every kind of ride.">Moderna, čista i udobna vozila za svaku vožnju.</p>
   </div>
 
   <div class="gallery-grid">
-    <div class="g-tile"><img src="uploads/1.webp" alt="Cool Taxi vozilo na ulicama Kragujevca" loading="lazy" decoding="async" width="1240" height="1653" style="object-position:center 70%"></div>
-    <div class="g-tile"><img src="uploads/2.webp" alt="Cool Taxi flota — taksi vozila u Kragujevcu" loading="lazy" decoding="async" width="1200" height="1600" style="object-position:center 70%"></div>
-    <div class="g-tile"><img src="uploads/3.webp" alt="Taksi prevoz Kragujevac — Cool Taxi vozilo u akciji" loading="lazy" decoding="async" width="1240" height="1653" style="object-position:center 80%"></div>
-    <div class="g-tile"><img src="uploads/4.webp" alt="Cool Taxi vozač i putnik" loading="lazy" decoding="async" width="1651" height="1238"></div>
-    <div class="g-tile"><img src="uploads/5.webp" alt="Cool Taxi vozilo — taxi Kragujevac" loading="lazy" decoding="async" width="1654" height="1240"></div>
-    <div class="g-tile"><img src="uploads/6.webp" alt="Cool Taxi vozač pored taksi vozila u Kragujevcu" loading="lazy" decoding="async" width="1200" height="1600" style="object-position:center 70%"></div>
+    <div class="g-tile"><img src="uploads/1.webp" alt="Cool Taxi vozilo na ulicama Kragujevca" data-en-alt="Cool Taxi car on the streets of Kragujevac" loading="lazy" decoding="async" width="1240" height="1653" style="object-position:center 70%"></div>
+    <div class="g-tile"><img src="uploads/2.webp" alt="Cool Taxi flota — taksi vozila u Kragujevcu" data-en-alt="Cool Taxi fleet — taxi cars in Kragujevac" loading="lazy" decoding="async" width="1200" height="1600" style="object-position:center 70%"></div>
+    <div class="g-tile"><img src="uploads/3.webp" alt="Taksi prevoz Kragujevac — Cool Taxi vozilo u akciji" data-en-alt="Taxi service Kragujevac — Cool Taxi car in action" loading="lazy" decoding="async" width="1240" height="1653" style="object-position:center 80%"></div>
+    <div class="g-tile"><img src="uploads/4.webp" alt="Cool Taxi vozač i putnik" data-en-alt="Cool Taxi driver and passenger" loading="lazy" decoding="async" width="1651" height="1238"></div>
+    <div class="g-tile"><img src="uploads/5.webp" alt="Cool Taxi vozilo — taxi Kragujevac" data-en-alt="Cool Taxi car — taxi Kragujevac" loading="lazy" decoding="async" width="1654" height="1240"></div>
+    <div class="g-tile"><img src="uploads/6.webp" alt="Cool Taxi vozač pored taksi vozila u Kragujevcu" data-en-alt="Cool Taxi driver next to a cab in Kragujevac" loading="lazy" decoding="async" width="1200" height="1600" style="object-position:center 70%"></div>
   </div>
 </section>
 
 
 <section class="pages-grid">
   <div class="pages-head">
-    <span class="kicker">Brzi pristup</span>
-    <h2 class="big-head">Sve što ti treba —<br><em>na klik</em>.</h2>
+    <span class="kicker" data-en="Quick links">Brzi pristup</span>
+    <h2 class="big-head"><span data-en="Everything you need —">Sve što ti treba —</span><br><em data-en="one click away">na klik</em>.</h2>
   </div>
   <div class="pages-cards">
     <a href="/o-nama" class="pcard">
@@ -602,8 +608,8 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
           <text x="100" y="125.2" text-anchor="middle" font-family="Geist Mono" font-weight="700" font-size="8" fill="#1a1a1a" letter-spacing="1">200+ VOZAČA · 140 VOZILA</text>
         </svg>
       </div>
-      <h3>O nama</h3>
-      <p>Priča Cool Taxi-a, naše vrednosti i ekipa od 200+ vozača.</p>
+      <h3 data-en="About us">O nama</h3>
+      <p data-en="The Cool Taxi story, our values, and a 200+ driver crew.">Priča Cool Taxi-a, naše vrednosti i ekipa od 200+ vozača.</p>
       <span class="pcard-arrow">→</span>
     </a>
     <a href="/usluge" class="pcard pcard-dark">
@@ -657,8 +663,8 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
           </g>
         </svg>
       </div>
-      <h3>Usluge</h3>
-      <p>Gradske, međugradske, inostrane, ugovori sa firmama, reklame.</p>
+      <h3 data-en="Services">Usluge</h3>
+      <p data-en="City, intercity, cross-border, corporate deals, advertising.">Gradske, međugradske, inostrane, ugovori sa firmama, reklame.</p>
       <span class="pcard-arrow">→</span>
     </a>
     <a href="/kontakt" class="pcard pcard-accent">
@@ -691,8 +697,8 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
           <text x="100" y="125.2" text-anchor="middle" font-family="Geist Mono" font-weight="700" font-size="8" fill="#7DC242" letter-spacing="1.1">TEL · VIBER · MAIL · MAPA</text>
         </svg>
       </div>
-      <h3>Kontakt</h3>
-      <p>Telefon, Viber/WhatsApp, e-mail, lokacija — 24 sata.</p>
+      <h3 data-en="Contact">Kontakt</h3>
+      <p data-en="Phone, Viber/WhatsApp, email, location — around the clock.">Telefon, Viber/WhatsApp, e-mail, lokacija — 24 sata.</p>
       <span class="pcard-arrow">→</span>
     </a>
   </div>
@@ -702,26 +708,26 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
   <div class="foot-top">
     <div class="foot-brand">
       <img src="assets/logo.webp" alt="Cool Taxi" class="brand-logo big" width="200" height="97" loading="lazy" decoding="async">
-      <p>Najveća taksi flota u Kragujevcu. Od 2016.</p>
+      <p data-en="The largest taxi fleet in Kragujevac. Since 2016.">Najveća taksi flota u Kragujevcu. Od 2016.</p>
     </div>
     <div class="foot-cols">
       <div>
-        <h4 class="foot-col-h">Usluge</h4>
-        <a href="/usluge">Gradske vožnje</a>
-        <a href="/usluge">Međugradske</a>
-        <a href="/usluge">Inostrane</a>
-        <a href="/usluge">Ugovori sa firmama</a>
-        <a href="/usluge">Reklamiranje</a>
+        <h4 class="foot-col-h" data-en="Services">Usluge</h4>
+        <a href="/usluge" data-en="City rides">Gradske vožnje</a>
+        <a href="/usluge" data-en="Intercity">Međugradske</a>
+        <a href="/usluge" data-en="Cross-border">Inostrane</a>
+        <a href="/usluge" data-en="Corporate contracts">Ugovori sa firmama</a>
+        <a href="/usluge" data-en="Advertising">Reklamiranje</a>
       </div>
       <div>
         <h4 class="foot-col-h">Cool Taxi</h4>
-        <a href="/o-nama">O nama</a>
-        <a href="/aplikacija">Aplikacija</a>
-        <a href="/kontakt">Kontakt</a>
-        <a href="/usluge#zahtev">Pošalji upit</a>
+        <a href="/o-nama" data-en="About">O nama</a>
+        <a href="/aplikacija" data-en="App">Aplikacija</a>
+        <a href="/kontakt" data-en="Contact">Kontakt</a>
+        <a href="/usluge#zahtev" data-en="Send inquiry">Pošalji upit</a>
       </div>
       <div>
-        <h4 class="foot-col-h">Kontakt</h4>
+        <h4 class="foot-col-h" data-en="Contact">Kontakt</h4>
         <a href="tel:034200555">034 200 555</a>
         <a href="https://wa.me/381695200555">069 5200 555</a>
         <a href="mailto:taxicool034@gmail.com">taxicool034@gmail.com</a>
@@ -729,12 +735,12 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
     </div>
   </div>
   <div class="foot-bottom">
-    <span>© 2016—2026 Cool Taxi · Sva prava zadržava Cool Taxi</span>
+    <span data-en="© 2016—2026 Cool Taxi · All rights reserved">© 2016—2026 Cool Taxi · Sva prava zadržava Cool Taxi</span>
     <span class="foot-time" id="foot-time">— : —</span>
   </div>
   <div class="foot-watermark">COOLTAXI</div>
 </footer>
-<a href="tel:034200555" class="fab" aria-label="Pozovi 034 200 555">
+<a href="tel:034200555" class="fab" aria-label="Pozovi 034 200 555" data-en-aria-label="Call 034 200 555">
   <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
   <span class="fab-pulse"></span>
 </a>
