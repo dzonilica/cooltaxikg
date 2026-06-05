@@ -28,7 +28,7 @@ em{font-style:normal;color:var(--green-deep)}
 
 /* brand logo image (replaces SVG) */
 .brand-logo{
-  height:38px;width:auto;display:block;
+  height:44px;width:auto;display:block;
   transition:transform .2s;
 }
 .brand-logo.big{height:54px}
@@ -60,7 +60,7 @@ em{font-style:normal;color:var(--green-deep)}
 .nav{
   position:fixed;top:0;left:0;right:0;z-index:50;
   display:flex;align-items:center;justify-content:space-between;
-  padding:18px 32px;
+  padding:22px 32px;
   background:transparent;
   backdrop-filter:none;
   -webkit-backdrop-filter:none;
@@ -72,7 +72,7 @@ em{font-style:normal;color:var(--green-deep)}
   backdrop-filter:blur(14px);
   -webkit-backdrop-filter:blur(14px);
   border-bottom-color:var(--line);
-  padding:12px 32px;
+  padding:14px 32px;
 }
 
 /* HOME — white nav links over dark video hero; logo stays natural color */
@@ -103,7 +103,7 @@ body[data-page="home"] .nav:not(.scrolled) .nav-burger span{background:#fff}
 .brand-word em{color:var(--green-deep)}
 .brand-word.light{color:#fff}
 .brand-word.light em{color:var(--green)}
-.nav-links{display:flex;gap:28px}
+.nav-links{display:flex;gap:28px;margin-left:24px}
 .nav-links a{
   font-size:14.5px;font-weight:500;color:var(--ink-3);
   position:relative;padding:6px 0;
