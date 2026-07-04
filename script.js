@@ -152,13 +152,14 @@ async function submitForm(e){
   });
 })();
 
-/* hero video — fade in when ready, drop on Data Saver to save bandwidth */
+/* hero video — fade in as soon as we have any frames; be forgiving on mobile */
 (function(){
   const v = document.querySelector('.hero-video-bg video');
   if (!v) return;
 
   const conn = navigator.connection || {};
-  if (conn.saveData || (conn.effectiveType && /(^|-)2g$/.test(conn.effectiveType))) {
+  // Only bail on genuinely tiny pipes; saveData alone is too aggressive (Chrome Android turns it on by default in Lite mode).
+  if (conn.effectiveType && /(^|-)2g$/.test(conn.effectiveType)) {
     v.removeAttribute('autoplay');
     v.removeAttribute('preload');
     const src = v.querySelector('source');
@@ -167,11 +168,35 @@ async function submitForm(e){
     return;
   }
 
-  if (v.readyState >= 3) {
-    v.classList.add('is-ready');
+  const markReady = () => v.classList.add('is-ready');
+
+  if (v.readyState >= 2) {
+    markReady();
   } else {
-    v.addEventListener('canplay', () => v.classList.add('is-ready'), { once: true });
+    // Any of these means we have at least the first frame — enough to fade in.
+    ['loadeddata','canplay','canplaythrough','playing'].forEach(ev =>
+      v.addEventListener(ev, markReady, { once: true })
+    );
+    // Safety net: on iOS Low Power Mode autoplay is blocked and 'canplay' may never fire.
+    // Poll readyState briefly, then give up and just show whatever we have.
+    let tries = 0;
+    const poll = setInterval(() => {
+      if (v.readyState >= 2 || tries++ > 20) {
+        clearInterval(poll);
+        markReady();
+      }
+    }, 250);
   }
-  const tryPlay = () => v.play().catch(() => {});
+
+  const tryPlay = () => {
+    const p = v.play();
+    if (p && p.catch) p.catch(() => {
+      // Autoplay blocked (iOS Low Power / user setting). Retry on first interaction.
+      const kick = () => { v.play().catch(() => {}); };
+      document.addEventListener('touchstart', kick, { once: true, passive: true });
+      document.addEventListener('click', kick, { once: true });
+    });
+  };
   v.addEventListener('loadeddata', tryPlay, { once: true });
+  if (v.readyState >= 2) tryPlay();
 })();
