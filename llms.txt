@@ -14,11 +14,11 @@ Cool Taxi je registrovan brend taksi prevoza u gradu Kragujevcu, Šumadijski okr
 
 ## Ključne stranice
 
-- [Početna](https://taxikragujevac.com/): Pregled usluga, flote, načina kontakta i poziv na akciju za rezervaciju.
-- [Usluge](https://taxikragujevac.com/usluge): Detalji o gradskim vožnjama (taksimetar), međugradskim (Beograd ~140 km, Niš ~150 km, Novi Sad ~225 km, Aerodrom Nikola Tesla ~165 km), inostranim destinacijama (Sarajevo, Skoplje, Solun, Beč, Budimpešta), korporativnim ugovorima i reklamiranju.
-- [O nama](https://taxikragujevac.com/o-nama): Priča kompanije od 2016. godine, vrednosti (pouzdanost, bezbednost, ljubaznost, fer cene), statistika flote i tima.
-- [Aplikacija](https://taxikragujevac.com/aplikacija): Cool Taxi mobilna aplikacija — iOS (App Store) i Android (Google Play), naručivanje u 2 klika, praćenje vozila uživo, plaćanje karticom.
-- [Kontakt](https://taxikragujevac.com/kontakt): Telefoni, Viber/WhatsApp, e-mail, mapa lokacije i forma za poruku.
+- [Početna](https://cooltaxikragujevac.com/): Pregled usluga, flote, načina kontakta i poziv na akciju za rezervaciju.
+- [Usluge](https://cooltaxikragujevac.com/usluge): Detalji o gradskim vožnjama (taksimetar), međugradskim (Beograd ~140 km, Niš ~150 km, Novi Sad ~225 km, Aerodrom Nikola Tesla ~165 km), inostranim destinacijama (Sarajevo, Skoplje, Solun, Beč, Budimpešta), korporativnim ugovorima i reklamiranju.
+- [O nama](https://cooltaxikragujevac.com/o-nama): Priča kompanije od 2016. godine, vrednosti (pouzdanost, bezbednost, ljubaznost, fer cene), statistika flote i tima.
+- [Aplikacija](https://cooltaxikragujevac.com/aplikacija): Cool Taxi mobilna aplikacija — iOS (App Store) i Android (Google Play), naručivanje u 2 klika, praćenje vozila uživo, plaćanje karticom.
+- [Kontakt](https://cooltaxikragujevac.com/kontakt): Telefoni, Viber/WhatsApp, e-mail, mapa lokacije i forma za poruku.
 
 ## Usluge u detalje
 
